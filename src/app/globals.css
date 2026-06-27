@@ -116,19 +116,19 @@ body {
 
 /* ── Responsive typography utilities ── */
 .text-hero {
-  font-size: clamp(2rem, 4.5vw, 5.4rem);
+  font-size: clamp(1.6rem, 3.5vw, 5.4rem);
 }
 .text-heading {
-  font-size: clamp(1.8rem, 3.8vw, 5rem);
+  font-size: clamp(1.4rem, 3vw, 5rem);
 }
 .text-subheading {
-  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  font-size: clamp(1.2rem, 2.2vw, 3rem);
 }
 .text-label-caps {
-  font-size: clamp(0.7rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.6rem, 0.9vw, 1.1rem);
 }
 .text-body-lg {
-  font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+  font-size: clamp(0.85rem, 1.1vw, 1.25rem);
 }
 .section-px {
   padding-left: clamp(1rem, 5vw, 5rem);
