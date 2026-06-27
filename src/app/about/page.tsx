@@ -100,7 +100,7 @@ export default function AboutPage() {
             style={{ marginLeft: "2rem" }}
           >
             <p
-              className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6"
+              className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6"
               style={{ marginBottom: "1rem" }}
             >
               ABOUT WISE
@@ -1834,7 +1834,7 @@ export default function AboutPage() {
         >
           <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
 
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6 relative z-10">
             PARTNER WITH US
           </p>
           <h2

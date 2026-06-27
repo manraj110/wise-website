@@ -1192,7 +1192,7 @@ export default function WhyWisePage() {
             </p>
 
             <motion.h1
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1205,7 +1205,7 @@ export default function WhyWisePage() {
             </motion.h1>
 
             <motion.p
-              className="text-white/65 text-xl max-w-xl leading-relaxed"
+              className="text-white/65 text-body-lg max-w-xl leading-relaxed"
               style={{ marginBottom: "2rem" }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1250,11 +1250,11 @@ export default function WhyWisePage() {
             className="relative z-10"
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-12">
               OUR APPROACH
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               Schools Come for{" "}
@@ -1309,11 +1309,11 @@ export default function WhyWisePage() {
           className="relative z-10 mb-20"
           style={{ marginTop: "6rem", marginLeft: "2rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-12">
             OUR DIFFERENTIATORS
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
           >
             Why Institutions <span className="text-[#F4B942]">Choose WISE</span>
@@ -1385,11 +1385,11 @@ export default function WhyWisePage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
             ACADEMIC GUIDANCE
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Inspired by Leaders Who Have{" "}
@@ -1696,11 +1696,11 @@ export default function WhyWisePage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
               OUR BELIEF
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               We Build <span className="text-[#F4B942]">Institutions,</span>
@@ -1747,11 +1747,11 @@ export default function WhyWisePage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
               CONTINUOUS SUPPORT
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               Support That <span className="text-[#F4B942]">Continues</span>{" "}
@@ -1792,11 +1792,11 @@ export default function WhyWisePage() {
           className="relative z-10 mb-16"
           style={{ marginLeft: "2rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
             THE WISE DIFFERENCE
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
           >
             Traditional Consultancy{" "}
@@ -1968,7 +1968,7 @@ export default function WhyWisePage() {
           }}
         >
           <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6 relative z-10">
             GET STARTED
           </p>
           <h2
