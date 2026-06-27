@@ -25,9 +25,29 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  if (location.hash) {
+                    window.__pendingHash = location.hash;
+                    history.replaceState(null, "", location.pathname + location.search);
+                    document.documentElement.style.visibility = "hidden";
+                    setTimeout(function () {
+                      document.documentElement.style.visibility = "";
+                    }, 5000);
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
