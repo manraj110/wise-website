@@ -35,22 +35,23 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function () {
-                try {
-                  if (location.hash) {
-                    window.__pendingHash = location.hash;
-                    history.replaceState(null, "", location.pathname + location.search);
-                    document.documentElement.style.visibility = "hidden";
-                    setTimeout(function () {
-                      document.documentElement.style.visibility = "";
-                    }, 5000);
-                  }
-                } catch (e) {}
-              })();
-            `,
+        (function () {
+          try {
+            if (location.hash) {
+              window.__pendingHash = location.hash;
+              history.replaceState(null, "", location.pathname + location.search);
+              document.documentElement.style.visibility = "hidden";
+              setTimeout(function () {
+                document.documentElement.style.visibility = "";
+              }, 5000);
+            }
+          } catch (e) {}
+        })();
+      `,
           }}
         />
       </head>
