@@ -418,7 +418,7 @@ export default function ServicesPage() {
             </p>
 
             <motion.h1
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-4xl"
+              className="text-hero font-bold leading-[1.1] tracking-[-0.05em] max-w-4xl"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1745,7 +1745,7 @@ export default function ServicesPage() {
             GET STARTED
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="text-hero font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Looking for the Right Solution for

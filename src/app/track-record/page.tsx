@@ -1501,7 +1501,7 @@ export default function TrackRecordPage() {
             GET STARTED
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="text-hero font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Let's Build the Next{" "}
