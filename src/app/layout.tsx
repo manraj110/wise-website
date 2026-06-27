@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "WISE — Educating India",
   description:
     "End-to-end educational consulting for CBSE affiliation, school planning, academic systems, training, and institutional development.",
+  openGraph: {
+    title: "WISE — Educating India",
+    description:
+      "End-to-end educational consulting for CBSE affiliation, school planning, academic systems, training, and institutional development.",
+    images: ["/logo2.jpg"],
+  },
 };
 
 export default function RootLayout({
