@@ -217,7 +217,7 @@ export default function TrackRecordPage() {
             </p>
 
             <motion.h1
-              className="text-hero font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
+              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -230,7 +230,7 @@ export default function TrackRecordPage() {
             </motion.h1>
 
             <motion.p
-              className="text-white/65 text-body-lg max-w-xl leading-relaxed"
+              className="text-white/65 text-xl max-w-xl leading-relaxed"
               style={{ marginBottom: "2rem" }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -415,11 +415,11 @@ export default function TrackRecordPage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
               OUR STANDARD OF WORK
             </p>
             <h2
-              className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
               style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
             >
               Excellence Without{" "}
@@ -613,11 +613,11 @@ export default function TrackRecordPage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             PROJECT DIVERSITY
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Supporting Institutions Through{" "}
@@ -696,11 +696,11 @@ export default function TrackRecordPage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             COMPLEX CASES
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Every Institution Has{" "}
@@ -852,7 +852,7 @@ export default function TrackRecordPage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
               PARTNERSHIPS THAT GROW
             </p>
             <h2
@@ -1129,11 +1129,11 @@ export default function TrackRecordPage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             INSTITUTIONS WE HAVE SUPPORTED
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Diverse Institutions.{" "}
@@ -1247,11 +1247,11 @@ export default function TrackRecordPage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "3rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             HOW WE GROW
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Built Through Trust,{" "}
@@ -1353,11 +1353,11 @@ export default function TrackRecordPage() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             TESTIMONIALS
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             What Our <span className="text-[#F4B942]">Clients Say</span>
@@ -1444,7 +1444,7 @@ export default function TrackRecordPage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
               LOOKING AHEAD
             </p>
             <h2
@@ -1497,11 +1497,11 @@ export default function TrackRecordPage() {
         >
           <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
 
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6 relative z-10">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
             GET STARTED
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Let's Build the Next{" "}

@@ -371,7 +371,7 @@ export default function Home() {
             </p>
 
             <motion.h1
-              className="text-hero font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
+              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -384,7 +384,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-white/65 text-body-lg max-w-xl leading-relaxed"
+              className="text-white/65 text-xl max-w-xl leading-relaxed"
               style={{ marginBottom: "2rem" }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -703,7 +703,7 @@ export default function Home() {
  "
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-12">
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
               ABOUT WISE
             </p>
             <h2
@@ -1071,7 +1071,7 @@ export default function Home() {
           className="mb-32"
           style={{ marginLeft: "2rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-12">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
             OUR SERVICES
           </p>
           <h2
@@ -4369,11 +4369,11 @@ export default function Home() {
         <div className="absolute bottom-0 right-[-120px] w-[300px] h-[300px] bg-purple-600/10 blur-[140px] rounded-full" />
 
         <div className="relative z-10" style={{ marginLeft: "2rem" }}>
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-12">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
             OUR DIFFERENTIATORS
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "3rem" }}
           >
             Why Schools Choose <span className="text-[#F4B942]">Wonder</span>
@@ -4832,11 +4832,11 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "8rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             OUR APPROACH
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             How We <span className="text-[#F4B942]">Work</span>
@@ -5114,11 +5114,11 @@ export default function Home() {
           className="mb-32"
           style={{ marginLeft: "2rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             OUR IMPACT
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Track Record & <span className="text-[#F4B942]">Institutional</span>
@@ -5989,11 +5989,11 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             Success tales
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Real Schools, <span className="text-[#F4B942]">Real Stories</span>
@@ -6223,11 +6223,11 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             COLLABORATION
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Guided By{" "}
@@ -6506,11 +6506,11 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ marginLeft: "2rem", marginBottom: "4rem" }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             GET IN TOUCH
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Let's Build Something{" "}

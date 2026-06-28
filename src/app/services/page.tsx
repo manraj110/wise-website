@@ -418,7 +418,7 @@ export default function ServicesPage() {
             </p>
 
             <motion.h1
-              className="text-hero font-bold leading-[1.1] tracking-[-0.05em] max-w-4xl"
+              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-4xl"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -883,11 +883,11 @@ export default function ServicesPage() {
             marginBottom: "4rem",
           }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             INITIAL SERVICES
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             What Schools Usually
@@ -985,11 +985,11 @@ export default function ServicesPage() {
             marginBottom: "5rem",
           }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             LONG-TERM PARTNERSHIPS
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Services That Support
@@ -1428,11 +1428,11 @@ export default function ServicesPage() {
             marginBottom: "4rem",
           }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             NEW SCHOOL DEVELOPMENT
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             From Concept
@@ -1551,11 +1551,11 @@ export default function ServicesPage() {
             marginBottom: "4rem",
           }}
         >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
             TAILORED SOLUTIONS
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em]"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
             style={{ marginTop: "1.5rem" }}
           >
             Every School is <span className="text-[#F4B942]">Different</span>
@@ -1741,11 +1741,11 @@ export default function ServicesPage() {
         >
           <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
 
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-label-caps font-semibold mb-6 relative z-10">
+          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
             GET STARTED
           </p>
           <h2
-            className="text-hero font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Looking for the Right Solution for
