@@ -366,7 +366,7 @@ export default function Home() {
             style={{ marginLeft: "2rem", marginTop: "4rem" }}
             className="flex flex-col justify-center"
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6 whitespace-nowrap">
+            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6 md:whitespace-nowrap">
               END-TO-END EDUCATIONAL CONSULTING
             </p>
 
@@ -480,28 +480,29 @@ export default function Home() {
             transition={{ duration: 1.2, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            {/* ================= OUTER RINGS ================= */}
-            <div className="absolute w-[760px] h-[760px] rounded-full border border-white/[0.04]" />
+            <div className="hero-orb">
+              {/* ================= OUTER RINGS ================= */}
+              <div className="absolute w-[760px] h-[760px] rounded-full border border-white/[0.04]" />
 
-            <div className="absolute w-[560px] h-[520px] rounded-full border border-white/[0.05]" />
+              <div className="absolute w-[560px] h-[520px] rounded-full border border-white/[0.05]" />
 
-            {/* ================= AMBIENT PURPLE GLOW ================= */}
-            <motion.div
-              className="absolute w-[380px] h-[380px] bg-[#A855F7]/30 blur-[70px] rounded-full"
-              animate={{
-                scale: [1, 1.08, 1],
-                opacity: [0.5, 0.8, 0.5],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+              {/* ================= AMBIENT PURPLE GLOW ================= */}
+              <motion.div
+                className="absolute w-[380px] h-[380px] bg-[#A855F7]/30 blur-[70px] rounded-full"
+                animate={{
+                  scale: [1, 1.08, 1],
+                  opacity: [0.5, 0.8, 0.5],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
 
-            {/* ================= OUTER WHITE RING ================= */}
-            <motion.div
-              className="
+              {/* ================= OUTER WHITE RING ================= */}
+              <motion.div
+                className="
      absolute
      w-[360px]
      h-[360px]
@@ -510,17 +511,17 @@ export default function Home() {
      border-white/80
      shadow-[0_0_55px_rgba(255,255,255,0.7)]
    "
-              animate={{ scale: [1, 1.04, 1] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
 
-            {/* ================= INNER CORE ================= */}
-            <motion.div
-              className="
+              {/* ================= INNER CORE ================= */}
+              <motion.div
+                className="
      relative
      w-[340px]
      h-[340px]
@@ -531,22 +532,22 @@ export default function Home() {
      justify-center
      overflow-hidden
    "
-              animate={{ scale: [1, 1.04, 1] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              {/* INNER BORDER */}
-              <div className="absolute inset-[18px] rounded-full border border-white/10" />
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                {/* INNER BORDER */}
+                <div className="absolute inset-[18px] rounded-full border border-white/10" />
 
-              {/* GOLD INNER GLOW */}
-              <div className="absolute w-[220px] h-[220px] bg-[#F4B942]/10 blur-[60px] rounded-full" />
+                {/* GOLD INNER GLOW */}
+                <div className="absolute w-[220px] h-[220px] bg-[#F4B942]/10 blur-[60px] rounded-full" />
 
-              {/* ================= LOGO HOLDER ================= */}
-              <div
-                className="
+                {/* ================= LOGO HOLDER ================= */}
+                <div
+                  className="
        relative
        z-10
        flex
@@ -555,25 +556,26 @@ export default function Home() {
        w-[280px]
        h-[280px]
      "
-              >
-                {/* SOFT GOLD GLOW */}
-                <div className="absolute w-[240px] h-[240px] bg-[#F4B942]/10 blur-[80px] rounded-full" />
+                >
+                  {/* SOFT GOLD GLOW */}
+                  <div className="absolute w-[240px] h-[240px] bg-[#F4B942]/10 blur-[80px] rounded-full" />
 
-                {/* LOGO */}
-                <div className="relative w-[240px] h-[240px] rounded-full overflow-hidden">
-                  <Image
-                    src="/logo2.jpg"
-                    alt="WISE Logo"
-                    fill
-                    priority
-                    className="object-cover scale-[2.2]"
-                    style={{
-                      objectPosition: "center center",
-                    }}
-                  />
+                  {/* LOGO */}
+                  <div className="relative w-[240px] h-[240px] rounded-full overflow-hidden">
+                    <Image
+                      src="/logo2.jpg"
+                      alt="WISE Logo"
+                      fill
+                      priority
+                      className="object-cover scale-[2.2]"
+                      style={{
+                        objectPosition: "center center",
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>

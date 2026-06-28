@@ -132,6 +132,61 @@ html {
   line-height: 1.15 !important;
 }
 
+/* ===================================================================
+   HERO ORB RESPONSIVE SCALE
+   Problem this solves: the ring/logo graphic on the right side of the
+   hero is built from several fixed-pixel circles (760px down to 240px)
+   that never change size. The hero is a 2-column grid (1.2fr text /
+   0.8fr orb), so on a 1920px+ monitor that 0.8fr column is wide enough
+   to hold a 760px circle comfortably — but on a 1366/1440/1536px
+   laptop (or any narrower window) that same column can be 300-500px
+   narrower, so the solid inner rings spill past the edge of the
+   screen and get clipped. This is the "circle is cut off on smaller
+   screens" bug.
+   Fix: wrap the whole ring stack in one box sized to its natural
+   760x760px footprint, then visually scale that whole box down as a
+   single unit at the widths where it would otherwise overflow. Every
+   ring scales together, so their proportions to each other (and to
+   the logo inside) stay exactly as designed — it just gets smaller,
+   like zooming out, instead of breaking.
+   ================================================================ */
+.hero-orb {
+  position: relative;
+  width: 760px;
+  height: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transform-origin: center center;
+}
+/* Squeezed 2-column zone: the hero is still side-by-side here, and
+   the 0.8fr column gets tighter than the orb's natural size. */
+@media (max-width: 1536px) {
+  .hero-orb { transform: scale(0.9); }
+}
+@media (max-width: 1280px) {
+  .hero-orb { transform: scale(0.78); }
+}
+@media (max-width: 1024px) {
+  .hero-orb { transform: scale(0.6); }
+}
+@media (max-width: 900px) {
+  .hero-orb { transform: scale(0.5); }
+}
+/* Below 768px the hero grid stacks to a single column (see
+   md:grid-cols-[1.2fr_0.8fr] in page.tsx), so the orb gets a full-width
+   row back and can afford to be a bit bigger again. */
+@media (max-width: 768px) {
+  .hero-orb { transform: scale(0.85); }
+}
+@media (max-width: 600px) {
+  .hero-orb { transform: scale(0.65); }
+}
+@media (max-width: 420px) {
+  .hero-orb { transform: scale(0.5); }
+}
+
 /* Used by HashScrollFix: hides the page while it settles the scroll
    position for a cross-page hash link, then fades it back in. */
 body.hash-settling {
