@@ -1,5 +1,5 @@
 diff --git a/src/app/globals.css b/src/app/globals.css
-index cedd2bc..25d9bfd 100644
+index cedd2bc..14369ce 100644
 --- a/src/app/globals.css
 +++ b/src/app/globals.css
 @@ -201,6 +201,72 @@ html {
@@ -60,7 +60,7 @@ index cedd2bc..25d9bfd 100644
 +   ================================================================ */
 +@media (min-width: 1024px) and (max-width: 1599px) {
 +  html {
-+    zoom: 0.8;
++    zoom: 0.75;
 +  }
 +}
 +
