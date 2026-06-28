@@ -597,7 +597,7 @@ export default function Home() {
 
             {/* CONTENT */}
             <div className="pl-2">
-              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
                 300+
               </h3>
 
@@ -618,7 +618,7 @@ export default function Home() {
 
             {/* CONTENT */}
             <div className="pl-2">
-              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
                 9
               </h3>
 
@@ -709,7 +709,7 @@ export default function Home() {
               ABOUT WISE
             </p>
             <h2
-              className="text-white font-bold text-6xl md:text-7xl leading-none"
+              className="text-white font-bold heading-fluid-72 leading-none"
               style={{ marginTop: "1.5rem", marginBottom: "20px" }}
             >
               Who We <span className="text-[#F4B942]">Are</span>
@@ -1077,7 +1077,7 @@ export default function Home() {
             OUR SERVICES
           </p>
           <h2
-            className="text-5xl md:text-7xl font-bold leading-[1.05] max-w-none mb-24"
+            className="heading-fluid-72 font-bold leading-[1.05] max-w-none mb-24"
             style={{ marginTop: "1.5rem" }}
           >
             Comprehensive <span className="text-[#F4B942]">Educational</span>
@@ -1102,7 +1102,7 @@ export default function Home() {
           >
             {/* NUMBER */}
             <div className="mb-10">
-              <p className="text-[#F4B942] text-8xl font-bold leading-none">
+              <p className="text-[#F4B942] heading-fluid-96 font-bold leading-none">
                 0{activeService + 1}
               </p>
             </div>
@@ -1110,7 +1110,7 @@ export default function Home() {
             {/* TITLE */}
             <h3
               className="
-     text-6xl
+     heading-fluid-60
      font-bold
      leading-[1.05]
      min-h-[150px]

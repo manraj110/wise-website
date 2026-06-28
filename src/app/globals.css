@@ -201,6 +201,35 @@ html {
   .hero-orb { transform: scale(0.25); }
 }
 
+/* ===================================================================
+   FIX 5 — REMAINING FIXED-SIZE TEXT (hero stat numbers, "Who We Are",
+   "Comprehensive Educational Solutions", services number + title)
+   Problem this solves: fix-zoomed-in-headings/fix2 converted most big
+   headings to clamp() (.heading-fluid-*), but a handful of elements
+   were missed and still used plain `text-Nxl md:text-Mxl` (or no
+   responsive variant at all). Those jump straight to their largest
+   Tailwind size at the 768px breakpoint and then stay that exact size
+   all the way up to a 4K monitor — so a 1366–1440px laptop renders the
+   identical pixel size as a 1920px+ screen, which reads as "too big"
+   on the smaller laptop relative to how much room it actually has.
+
+   Each class below only overrides font-size (not weight/line-height/
+   letter-spacing, which stay controlled by whatever Tailwind classes
+   are already on the element) and its clamp() max equals the original
+   fixed size — so on a large screen the text renders at exactly the
+   same size as before; only the in-between laptop widths now scale
+   smoothly instead of being pinned at the max.
+   ================================================================ */
+.heading-fluid-60 {
+  font-size: clamp(2.5rem, 2.12rem + 1.63vw, 3.75rem) !important;
+}
+.heading-fluid-72 {
+  font-size: clamp(3rem, 2.54rem + 1.96vw, 4.5rem) !important;
+}
+.heading-fluid-96 {
+  font-size: clamp(3.5rem, 2.73rem + 3.27vw, 6rem) !important;
+}
+
 /* Used by HashScrollFix: hides the page while it settles the scroll
    position for a cross-page hash link, then fades it back in. */
 body.hash-settling {
