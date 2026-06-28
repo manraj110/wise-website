@@ -101,3 +101,24 @@ body.hash-settling {
 body {
   transition: opacity 0.15s ease;
 }
+
+/* ── Fluid headings — overrides Tailwind's fixed md: size ── */
+[class*="text-[5.4rem]"] {
+  font-size: clamp(1.8rem, 3.5vw, 5.4rem) !important;
+}
+
+[class*="text-[5rem]"] {
+  font-size: clamp(1.6rem, 3vw, 5rem) !important;
+}
+
+[class*="text-7xl"] {
+  font-size: clamp(1.6rem, 3vw, 4.5rem) !important;
+}
+
+[class*="text-6xl"] {
+  font-size: clamp(1.4rem, 2.5vw, 3.75rem) !important;
+}
+
+[class*="text-5xl"] {
+  font-size: clamp(1.3rem, 2.2vw, 3rem) !important;
+}
