@@ -238,3 +238,15 @@ body.hash-settling {
 body {
   transition: opacity 0.15s ease;
 }
+
+@media (min-width: 1024px) and (max-width: 1599px) {
+  html {
+    zoom: 0.75;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.1;
+  }
+}
