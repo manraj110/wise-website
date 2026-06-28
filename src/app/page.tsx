@@ -367,7 +367,7 @@ export default function Home() {
             style={{ marginLeft: "2rem", marginTop: "4rem" }}
             className="flex flex-col justify-center min-w-0"
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
               END-TO-END EDUCATIONAL CONSULTING
             </p>
 

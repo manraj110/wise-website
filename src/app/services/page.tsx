@@ -414,7 +414,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             style={{ marginLeft: "2rem" }}
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
               OUR SERVICES
             </p>
 

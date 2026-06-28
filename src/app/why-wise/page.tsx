@@ -1188,7 +1188,7 @@ export default function WhyWisePage() {
             style={{ marginLeft: "2rem", marginTop: "4rem" }}
             className="flex flex-col justify-center"
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
               WHY WISE
             </p>
 

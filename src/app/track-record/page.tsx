@@ -213,7 +213,7 @@ export default function TrackRecordPage() {
             style={{ marginLeft: "2rem" }}
             className="flex flex-col justify-center"
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
+            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
               TRACK RECORD
             </p>
 

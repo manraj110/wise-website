@@ -1,0 +1,603 @@
+diff --git a/fix-navbar-zoom-1439.patch b/fix-navbar-zoom-1439.patch
+deleted file mode 100644
+index 94968a7..0000000
+--- a/fix-navbar-zoom-1439.patch
++++ /dev/null
+@@ -1,250 +0,0 @@
+-diff --git a/src/app/about/page.tsx b/src/app/about/page.tsx
+-index 8970bb9..086180c 100644
+---- a/src/app/about/page.tsx
+-+++ b/src/app/about/page.tsx
+-@@ -82,6 +82,7 @@ export default function AboutPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ============================================================
+-           SECTION 1 — HERO
+-       ============================================================ */}
+-@@ -1889,6 +1890,7 @@ export default function AboutPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/globals.css b/src/app/globals.css
+-index cedd2bc..33e40fd 100644
+---- a/src/app/globals.css
+-+++ b/src/app/globals.css
+-@@ -201,6 +201,91 @@ html {
+-   .hero-orb { transform: scale(0.25); }
+- }
+- 
+-+/* ===================================================================
+-+   FIX 5 — REMAINING FIXED-SIZE TEXT (hero stat numbers, "Who We Are",
+-+   "Comprehensive Educational Solutions", services number + title)
+-+   Problem this solves: fix-zoomed-in-headings/fix2 converted most big
+-+   headings to clamp() (.heading-fluid-*), but a handful of elements
+-+   were missed and still used plain `text-Nxl md:text-Mxl` (or no
+-+   responsive variant at all). Those jump straight to their largest
+-+   Tailwind size at the 768px breakpoint and then stay that exact size
+-+   all the way up to a 4K monitor — so a 1366–1440px laptop renders the
+-+   identical pixel size as a 1920px+ screen, which reads as "too big"
+-+   on the smaller laptop relative to how much room it actually has.
+-+
+-+   Each class below only overrides font-size (not weight/line-height/
+-+   letter-spacing, which stay controlled by whatever Tailwind classes
+-+   are already on the element) and its clamp() max equals the original
+-+   fixed size — so on a large screen the text renders at exactly the
+-+   same size as before; only the in-between laptop widths now scale
+-+   smoothly instead of being pinned at the max.
+-+   ================================================================ */
+-+.heading-fluid-60 {
+-+  font-size: clamp(2.5rem, 2.12rem + 1.63vw, 3.75rem) !important;
+-+}
+-+.heading-fluid-72 {
+-+  font-size: clamp(3rem, 2.54rem + 1.96vw, 4.5rem) !important;
+-+}
+-+.heading-fluid-96 {
+-+  font-size: clamp(3.5rem, 2.73rem + 3.27vw, 6rem) !important;
+-+}
+-+
+-+/* ===================================================================
+-+   FIX 6 — AUTO "ZOOM" FOR LAPTOP-WIDTH SCREENS
+-+   Problem this solves: even with fluid headings, a LOT of this page
+-+   (card widths, paddings, gaps, image sizes, decorative blobs) is
+-+   still built with fixed px/rem values tuned for one specific screen
+-+   width. Manually zooming the browser to 80% shrinks EVERYTHING
+-+   uniformly (not just text) and was confirmed to look correct on
+-+   smaller laptop screens — so we replicate that automatically.
+-+
+-+   Why a wrapper class and not `html`/`body`:
+-+   The navbar is `position: fixed`. Zooming `html` directly also zooms
+-+   the navbar, which isn't wanted. `zoom` values compound multiplicatively
+-+   through nesting, so in principle a fixed element could be "un-zoomed"
+-+   by giving it the reciprocal zoom — but `position: fixed` combined with
+-+   nested zoom has known cross-browser inconsistencies (different engines
+-+   resolve the fixed element's containing block differently in this case).
+-+   The reliable fix is structural instead: apply `zoom` to a wrapper
+-+   div around the page content ONLY, with <Navbar /> rendered as a
+-+   sibling outside that wrapper — so the navbar is never a descendant
+-+   of the zoomed element and is simply unaffected, no cancellation math
+-+   needed. (See page.tsx / about/page.tsx / etc. — content is wrapped in
+-+   <div className="zoom-scale">.)
+-+
+-+   Why `zoom` and not `transform: scale()`:
+-+   `zoom` actually changes layout (siblings/page height reflow to the
+-+   new size, so there's no leftover blank space) — confirmed working
+-+   when this was on `html`. Moving it to a plain block-level wrapper div
+-+   behaves the same way (a div with default width:100% has no sibling
+-+   competing for space, same as html/body did).
+-+
+-+   ASSUMPTION TO VERIFY: a MacBook Air M1 at Apple's default display
+-+   setting reports a 1440px-wide browser viewport (macOS scales its
+-+   native 2560x1600 panel down to a "looks like 1440x900" logical
+-+   resolution). The range below stops at 1439px so that exact width is
+-+   excluded and stays at 100%. If you've changed your Mac's display
+-+   setting away from the default ("More Space"/"Larger Text" options
+-+   in System Settings > Displays), your actual viewport width will be
+-+   different — let me know and I'll adjust the cutoff.
+-+   ================================================================ */
+-+.zoom-scale {
+-+  display: block;
+-+}
+-+@media (min-width: 1024px) and (max-width: 1439px) {
+-+  .zoom-scale {
+-+    zoom: 0.8;
+-+  }
+-+}
+-+
+-+/* Optional: zoom IN slightly on very large/ultra-wide monitors.
+-+   Comment this block out if you don't want anything above 100%. */
+-+@media (min-width: 2560px) {
+-+  .zoom-scale {
+-+    zoom: 1.1;
+-+  }
+-+}
+-+
+- /* Used by HashScrollFix: hides the page while it settles the scroll
+-    position for a cross-page hash link, then fades it back in. */
+- body.hash-settling {
+-diff --git a/src/app/page.tsx b/src/app/page.tsx
+-index ab405b9..ba0ead2 100644
+---- a/src/app/page.tsx
+-+++ b/src/app/page.tsx
+-@@ -337,6 +337,7 @@ export default function Home() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+- 
+-       {/* TOP LEFT GOLD GLOW */}
+-@@ -597,7 +598,7 @@ export default function Home() {
+- 
+-             {/* CONTENT */}
+-             <div className="pl-2">
+--              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+-+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+-                 300+
+-               </h3>
+- 
+-@@ -618,7 +619,7 @@ export default function Home() {
+- 
+-             {/* CONTENT */}
+-             <div className="pl-2">
+--              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+-+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+-                 9
+-               </h3>
+- 
+-@@ -709,7 +710,7 @@ export default function Home() {
+-               ABOUT WISE
+-             </p>
+-             <h2
+--              className="text-white font-bold text-6xl md:text-7xl leading-none"
+-+              className="text-white font-bold heading-fluid-72 leading-none"
+-               style={{ marginTop: "1.5rem", marginBottom: "20px" }}
+-             >
+-               Who We <span className="text-[#F4B942]">Are</span>
+-@@ -1077,7 +1078,7 @@ export default function Home() {
+-             OUR SERVICES
+-           </p>
+-           <h2
+--            className="text-5xl md:text-7xl font-bold leading-[1.05] max-w-none mb-24"
+-+            className="heading-fluid-72 font-bold leading-[1.05] max-w-none mb-24"
+-             style={{ marginTop: "1.5rem" }}
+-           >
+-             Comprehensive <span className="text-[#F4B942]">Educational</span>
+-@@ -1102,7 +1103,7 @@ export default function Home() {
+-           >
+-             {/* NUMBER */}
+-             <div className="mb-10">
+--              <p className="text-[#F4B942] text-8xl font-bold leading-none">
+-+              <p className="text-[#F4B942] heading-fluid-96 font-bold leading-none">
+-                 0{activeService + 1}
+-               </p>
+-             </div>
+-@@ -1110,7 +1111,7 @@ export default function Home() {
+-             {/* TITLE */}
+-             <h3
+-               className="
+--     text-6xl
+-+     heading-fluid-60
+-      font-bold
+-      leading-[1.05]
+-      min-h-[150px]
+-@@ -7129,6 +7130,7 @@ export default function Home() {
+-           </motion.div>
+-         )}
+-       </AnimatePresence>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/services/page.tsx b/src/app/services/page.tsx
+-index 293debf..f500ffc 100644
+---- a/src/app/services/page.tsx
+-+++ b/src/app/services/page.tsx
+-@@ -393,6 +393,7 @@ export default function ServicesPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
+-@@ -1794,6 +1795,7 @@ export default function ServicesPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/track-record/page.tsx b/src/app/track-record/page.tsx
+-index bafe9c8..e3b8d1f 100644
+---- a/src/app/track-record/page.tsx
+-+++ b/src/app/track-record/page.tsx
+-@@ -192,6 +192,7 @@ export default function TrackRecordPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= PAGE BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/45 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/10 blur-[220px] rounded-full" />
+-@@ -1536,6 +1537,7 @@ export default function TrackRecordPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/why-wise/page.tsx b/src/app/why-wise/page.tsx
+-index a469aae..21c9d4a 100644
+---- a/src/app/why-wise/page.tsx
+-+++ b/src/app/why-wise/page.tsx
+-@@ -1166,6 +1166,7 @@ export default function WhyWisePage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
+-@@ -2020,6 +2021,7 @@ export default function WhyWisePage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+diff --git a/fix-navbar-zoom-final.patch b/fix-navbar-zoom-final.patch
+deleted file mode 100644
+index d43ad2d..0000000
+--- a/fix-navbar-zoom-final.patch
++++ /dev/null
+@@ -1,289 +0,0 @@
+-diff --git a/fix5-and-6-text-and-autozoom.patch b/fix5-and-6-text-and-autozoom.patch
+-deleted file mode 100644
+-index 1303131..0000000
+---- a/fix5-and-6-text-and-autozoom.patch
+-+++ /dev/null
+-@@ -1,135 +0,0 @@
+--diff --git a/src/app/globals.css b/src/app/globals.css
+--index cedd2bc..14369ce 100644
+----- a/src/app/globals.css
+--+++ b/src/app/globals.css
+--@@ -201,6 +201,72 @@ html {
+--   .hero-orb { transform: scale(0.25); }
+-- }
+-- 
+--+/* ===================================================================
+--+   FIX 5 — REMAINING FIXED-SIZE TEXT (hero stat numbers, "Who We Are",
+--+   "Comprehensive Educational Solutions", services number + title)
+--+   Problem this solves: fix-zoomed-in-headings/fix2 converted most big
+--+   headings to clamp() (.heading-fluid-*), but a handful of elements
+--+   were missed and still used plain `text-Nxl md:text-Mxl` (or no
+--+   responsive variant at all). Those jump straight to their largest
+--+   Tailwind size at the 768px breakpoint and then stay that exact size
+--+   all the way up to a 4K monitor — so a 1366–1440px laptop renders the
+--+   identical pixel size as a 1920px+ screen, which reads as "too big"
+--+   on the smaller laptop relative to how much room it actually has.
+--+
+--+   Each class below only overrides font-size (not weight/line-height/
+--+   letter-spacing, which stay controlled by whatever Tailwind classes
+--+   are already on the element) and its clamp() max equals the original
+--+   fixed size — so on a large screen the text renders at exactly the
+--+   same size as before; only the in-between laptop widths now scale
+--+   smoothly instead of being pinned at the max.
+--+   ================================================================ */
+--+.heading-fluid-60 {
+--+  font-size: clamp(2.5rem, 2.12rem + 1.63vw, 3.75rem) !important;
+--+}
+--+.heading-fluid-72 {
+--+  font-size: clamp(3rem, 2.54rem + 1.96vw, 4.5rem) !important;
+--+}
+--+.heading-fluid-96 {
+--+  font-size: clamp(3.5rem, 2.73rem + 3.27vw, 6rem) !important;
+--+}
+--+
+--+/* ===================================================================
+--+   FIX 6 — AUTO "ZOOM" FOR LAPTOP-WIDTH SCREENS
+--+   Problem this solves: even with fluid headings, a LOT of this page
+--+   (card widths, paddings, gaps, image sizes, decorative blobs) is
+--+   still built with fixed px/rem values tuned for one specific screen
+--+   width. Manually zooming the browser to 80% shrinks EVERYTHING
+--+   uniformly (not just text) and was confirmed to look correct on
+--+   smaller laptop screens — so we replicate that automatically.
+--+
+--+   Why `zoom` and not `transform: scale()`:
+--+   `zoom` actually changes layout (siblings/page height reflow to the
+--+   new size, so there's no leftover blank space), and it doesn't break
+--+   `position: fixed` elements the way `transform: scale()` on a wrapper
+--+   would — both matter here since the navbar is `fixed`. `zoom` lacked
+--+   reliable Firefox support until version 126 (2024); it's safe to rely
+--+   on now.
+--+
+--+   ASSUMPTION TO VERIFY: this assumes your own ("looks perfect") screen
+--+   is >=1600px wide and the problem laptops are in the 1024–1599px
+--+   range. If your own screen is narrower than 1600px, lower the 1600
+--+   below to match it (or this rule will zoom YOUR screen out too).
+--+   The breakpoint numbers are just CSS — change the px values freely.
+--+   ================================================================ */
+--+@media (min-width: 1024px) and (max-width: 1599px) {
+--+  html {
+--+    zoom: 0.75;
+--+  }
+--+}
+--+
+--+/* Optional: zoom IN slightly on very large/ultra-wide monitors.
+--+   Comment this block out if you don't want anything above 100%. */
+--+@media (min-width: 2560px) {
+--+  html {
+--+    zoom: 1.1;
+--+  }
+--+}
+--+
+-- /* Used by HashScrollFix: hides the page while it settles the scroll
+--    position for a cross-page hash link, then fades it back in. */
+-- body.hash-settling {
+--diff --git a/src/app/page.tsx b/src/app/page.tsx
+--index ab405b9..dcfc041 100644
+----- a/src/app/page.tsx
+--+++ b/src/app/page.tsx
+--@@ -597,7 +597,7 @@ export default function Home() {
+-- 
+--             {/* CONTENT */}
+--             <div className="pl-2">
+---              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+--+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+--                 300+
+--               </h3>
+-- 
+--@@ -618,7 +618,7 @@ export default function Home() {
+-- 
+--             {/* CONTENT */}
+--             <div className="pl-2">
+---              <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+--+              <h3 className="heading-fluid-60 font-bold text-white mb-4 leading-none transition-all duration-500 group-hover:text-[#F4B942]">
+--                 9
+--               </h3>
+-- 
+--@@ -709,7 +709,7 @@ export default function Home() {
+--               ABOUT WISE
+--             </p>
+--             <h2
+---              className="text-white font-bold text-6xl md:text-7xl leading-none"
+--+              className="text-white font-bold heading-fluid-72 leading-none"
+--               style={{ marginTop: "1.5rem", marginBottom: "20px" }}
+--             >
+--               Who We <span className="text-[#F4B942]">Are</span>
+--@@ -1077,7 +1077,7 @@ export default function Home() {
+--             OUR SERVICES
+--           </p>
+--           <h2
+---            className="text-5xl md:text-7xl font-bold leading-[1.05] max-w-none mb-24"
+--+            className="heading-fluid-72 font-bold leading-[1.05] max-w-none mb-24"
+--             style={{ marginTop: "1.5rem" }}
+--           >
+--             Comprehensive <span className="text-[#F4B942]">Educational</span>
+--@@ -1102,7 +1102,7 @@ export default function Home() {
+--           >
+--             {/* NUMBER */}
+--             <div className="mb-10">
+---              <p className="text-[#F4B942] text-8xl font-bold leading-none">
+--+              <p className="text-[#F4B942] heading-fluid-96 font-bold leading-none">
+--                 0{activeService + 1}
+--               </p>
+--             </div>
+--@@ -1110,7 +1110,7 @@ export default function Home() {
+--             {/* TITLE */}
+--             <h3
+--               className="
+---     text-6xl
+--+     heading-fluid-60
+--      font-bold
+--      leading-[1.05]
+--      min-h-[150px]
+-diff --git a/src/app/about/page.tsx b/src/app/about/page.tsx
+-index 8970bb9..086180c 100644
+---- a/src/app/about/page.tsx
+-+++ b/src/app/about/page.tsx
+-@@ -82,6 +82,7 @@ export default function AboutPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ============================================================
+-           SECTION 1 — HERO
+-       ============================================================ */}
+-@@ -1889,6 +1890,7 @@ export default function AboutPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/globals.css b/src/app/globals.css
+-index 65e2fe3..6c4a207 100644
+---- a/src/app/globals.css
+-+++ b/src/app/globals.css
+-@@ -239,14 +239,39 @@ body {
+-   transition: opacity 0.15s ease;
+- }
+- 
+--@media (min-width: 1024px) and (max-width: 1599px) {
+--  html {
+--    zoom: 0.75;
+-+/* ===================================================================
+-+   FIX 6 — AUTO "ZOOM" FOR LAPTOP-WIDTH SCREENS
+-+   Replaces an earlier version of this rule that targeted `html`
+-+   directly. That zoomed EVERYTHING including the fixed navbar, and
+-+   used a 1024-1599px range that also caught a MacBook Air's default
+-+   1440px-wide viewport (macOS scales its native 2560x1600 panel to a
+-+   "looks like 1440x900" logical resolution by default) — so it was
+-+   shrinking screens it shouldn't have.
+-+
+-+   Fix: zoom is now scoped to a wrapper div (.zoom-scale) around the
+-+   page content only, with <Navbar /> rendered as a sibling outside
+-+   it — so the navbar is never a descendant of the zoomed element and
+-+   is unaffected, no cancellation math needed. The range now stops at
+-+   1439px so a MacBook Air's default viewport is excluded too.
+-+
+-+   ASSUMPTION TO VERIFY: if you've changed your Mac's display setting
+-+   away from the default ("More Space" in System Settings > Displays),
+-+   your real viewport could be wider than 1440 — check at
+-+   whatismyscreenresolution.com and let me know if it's different.
+-+   ================================================================ */
+-+.zoom-scale {
+-+  display: block;
+-+}
+-+@media (min-width: 1024px) and (max-width: 1439px) {
+-+  .zoom-scale {
+-+    zoom: 0.8;
+-   }
+- }
+- 
+-+/* Optional: zoom IN slightly on very large/ultra-wide monitors.
+-+   Comment this block out if you don't want anything above 100%. */
+- @media (min-width: 2560px) {
+--  html {
+-+  .zoom-scale {
+-     zoom: 1.1;
+-   }
+- }
+-diff --git a/src/app/page.tsx b/src/app/page.tsx
+-index dcfc041..ba0ead2 100644
+---- a/src/app/page.tsx
+-+++ b/src/app/page.tsx
+-@@ -337,6 +337,7 @@ export default function Home() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+- 
+-       {/* TOP LEFT GOLD GLOW */}
+-@@ -7129,6 +7130,7 @@ export default function Home() {
+-           </motion.div>
+-         )}
+-       </AnimatePresence>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/services/page.tsx b/src/app/services/page.tsx
+-index 293debf..f500ffc 100644
+---- a/src/app/services/page.tsx
+-+++ b/src/app/services/page.tsx
+-@@ -393,6 +393,7 @@ export default function ServicesPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
+-@@ -1794,6 +1795,7 @@ export default function ServicesPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/track-record/page.tsx b/src/app/track-record/page.tsx
+-index bafe9c8..e3b8d1f 100644
+---- a/src/app/track-record/page.tsx
+-+++ b/src/app/track-record/page.tsx
+-@@ -192,6 +192,7 @@ export default function TrackRecordPage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= PAGE BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/45 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/10 blur-[220px] rounded-full" />
+-@@ -1536,6 +1537,7 @@ export default function TrackRecordPage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+-diff --git a/src/app/why-wise/page.tsx b/src/app/why-wise/page.tsx
+-index a469aae..21c9d4a 100644
+---- a/src/app/why-wise/page.tsx
+-+++ b/src/app/why-wise/page.tsx
+-@@ -1166,6 +1166,7 @@ export default function WhyWisePage() {
+-       <Navbar />
+-       <HashScrollFix />
+- 
+-+      <div className="zoom-scale">
+-       {/* ================= BACKGROUND LIGHTING ================= */}
+-       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
+-       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
+-@@ -2020,6 +2021,7 @@ export default function WhyWisePage() {
+-           </div>
+-         </motion.div>
+-       </section>
+-+      </div>
+-     </main>
+-   );
+- }
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index ba0ead2..ca93bd5 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -367,7 +367,7 @@ export default function Home() {
+             style={{ marginLeft: "2rem", marginTop: "4rem" }}
+             className="flex flex-col justify-center min-w-0"
+           >
+-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
++            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
+               END-TO-END EDUCATIONAL CONSULTING
+             </p>
+ 
+diff --git a/src/app/services/page.tsx b/src/app/services/page.tsx
+index f500ffc..914b84c 100644
+--- a/src/app/services/page.tsx
++++ b/src/app/services/page.tsx
+@@ -414,7 +414,7 @@ export default function ServicesPage() {
+             viewport={{ once: true }}
+             style={{ marginLeft: "2rem" }}
+           >
+-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
++            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
+               OUR SERVICES
+             </p>
+ 
+diff --git a/src/app/track-record/page.tsx b/src/app/track-record/page.tsx
+index e3b8d1f..af167f6 100644
+--- a/src/app/track-record/page.tsx
++++ b/src/app/track-record/page.tsx
+@@ -213,7 +213,7 @@ export default function TrackRecordPage() {
+             style={{ marginLeft: "2rem" }}
+             className="flex flex-col justify-center"
+           >
+-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
++            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
+               TRACK RECORD
+             </p>
+ 
+diff --git a/src/app/why-wise/page.tsx b/src/app/why-wise/page.tsx
+index 21c9d4a..0aa18cf 100644
+--- a/src/app/why-wise/page.tsx
++++ b/src/app/why-wise/page.tsx
+@@ -1188,7 +1188,7 @@ export default function WhyWisePage() {
+             style={{ marginLeft: "2rem", marginTop: "4rem" }}
+             className="flex flex-col justify-center"
+           >
+-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
++            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
+               WHY WISE
+             </p>
+ 
