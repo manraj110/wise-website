@@ -371,7 +371,7 @@ export default function Home() {
             </p>
 
             <motion.h1
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
+              className="heading-fluid-lg max-w-none"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -4373,7 +4373,7 @@ export default function Home() {
             OUR DIFFERENTIATORS
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "3rem" }}
           >
             Why Schools Choose <span className="text-[#F4B942]">Wonder</span>
@@ -4836,7 +4836,7 @@ export default function Home() {
             OUR APPROACH
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             How We <span className="text-[#F4B942]">Work</span>
@@ -5004,7 +5004,7 @@ export default function Home() {
                     {/* FADED BG NUMBER */}
                     <span
                       className={`
-                  text-[4.5rem] md:text-[5.5rem] font-bold leading-none select-none
+                  heading-fluid-stat leading-none select-none
                   flex-shrink-0 transition-colors duration-500
                   ${
                     isFilled
@@ -5118,7 +5118,7 @@ export default function Home() {
             OUR IMPACT
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Track Record & <span className="text-[#F4B942]">Institutional</span>
@@ -5993,7 +5993,7 @@ export default function Home() {
             Success tales
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Real Schools, <span className="text-[#F4B942]">Real Stories</span>
@@ -6096,7 +6096,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               viewport={{ once: false, margin: "-100px" }}
-              className="text-2xl md:text-[2.2rem] font-bold leading-[1.15]"
+              className="heading-fluid-xs"
               style={{ marginBottom: "1rem" }}
             >
               From Application to Approval in{" "}
@@ -6227,7 +6227,7 @@ export default function Home() {
             COLLABORATION
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Guided By{" "}
@@ -6510,7 +6510,7 @@ export default function Home() {
             GET IN TOUCH
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Let's Build Something{" "}

@@ -93,6 +93,45 @@ html {
   scroll-padding-top: 100px;
 }
 
+/* ===================================================================
+   FLUID HEADING SIZES
+   Problem this solves: headings used a fixed huge size for every screen
+   >=768px (e.g. text-5xl md:text-[5.4rem]), so a 1366px laptop got the
+   exact same 86px text as a 1920px+ monitor. Relative to a narrower
+   screen that's much bigger, which is why the page felt "zoomed in" on
+   smaller laptops even though it looked fine on a larger one.
+   clamp() scales the size smoothly with viewport width instead of
+   jumping at one breakpoint, so it self-adjusts on any screen size.
+   ================================================================ */
+.heading-fluid-lg {
+  font-size: clamp(3rem, 2.15rem + 3.38vw, 5.4rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.05em !important;
+}
+.heading-fluid-md {
+  font-size: clamp(3rem, 2.3rem + 2.82vw, 5rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+}
+.heading-fluid-sm {
+  font-size: clamp(3rem, 2.44rem + 2.25vw, 4.6rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.05em !important;
+}
+.heading-fluid-stat {
+  font-size: clamp(4.5rem, 4.15rem + 1.41vw, 5.5rem) !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+.heading-fluid-xs {
+  font-size: clamp(1.5rem, 1.25rem + 0.99vw, 2.2rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+}
+
 /* Used by HashScrollFix: hides the page while it settles the scroll
    position for a cross-page hash link, then fades it back in. */
 body.hash-settling {

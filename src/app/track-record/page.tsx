@@ -217,7 +217,7 @@ export default function TrackRecordPage() {
             </p>
 
             <motion.h1
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] max-w-none"
+              className="heading-fluid-lg max-w-none"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -419,7 +419,7 @@ export default function TrackRecordPage() {
               OUR STANDARD OF WORK
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-lg"
               style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
             >
               Excellence Without{" "}
@@ -617,7 +617,7 @@ export default function TrackRecordPage() {
             PROJECT DIVERSITY
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Supporting Institutions Through{" "}
@@ -700,7 +700,7 @@ export default function TrackRecordPage() {
             COMPLEX CASES
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Every Institution Has{" "}
@@ -856,7 +856,7 @@ export default function TrackRecordPage() {
               PARTNERSHIPS THAT GROW
             </p>
             <h2
-              className="text-5xl md:text-[4.6rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-sm"
               style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
             >
               From One Requirement to{" "}
@@ -1133,7 +1133,7 @@ export default function TrackRecordPage() {
             INSTITUTIONS WE HAVE SUPPORTED
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Diverse Institutions.{" "}
@@ -1251,7 +1251,7 @@ export default function TrackRecordPage() {
             HOW WE GROW
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Built Through Trust,{" "}
@@ -1357,7 +1357,7 @@ export default function TrackRecordPage() {
             TESTIMONIALS
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             What Our <span className="text-[#F4B942]">Clients Say</span>
@@ -1448,7 +1448,7 @@ export default function TrackRecordPage() {
               LOOKING AHEAD
             </p>
             <h2
-              className="text-5xl md:text-[4.6rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-sm"
               style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
             >
               Every Success Becomes a{" "}
@@ -1501,7 +1501,7 @@ export default function TrackRecordPage() {
             GET STARTED
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="heading-fluid-lg relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Let's Build the Next{" "}

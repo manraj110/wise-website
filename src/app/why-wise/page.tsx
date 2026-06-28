@@ -1192,7 +1192,7 @@ export default function WhyWisePage() {
             </p>
 
             <motion.h1
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-lg"
               style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1254,7 +1254,7 @@ export default function WhyWisePage() {
               OUR APPROACH
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-lg"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               Schools Come for{" "}
@@ -1313,7 +1313,7 @@ export default function WhyWisePage() {
             OUR DIFFERENTIATORS
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
           >
             Why Institutions <span className="text-[#F4B942]">Choose WISE</span>
@@ -1389,7 +1389,7 @@ export default function WhyWisePage() {
             ACADEMIC GUIDANCE
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem" }}
           >
             Inspired by Leaders Who Have{" "}
@@ -1700,7 +1700,7 @@ export default function WhyWisePage() {
               OUR BELIEF
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-lg"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               We Build <span className="text-[#F4B942]">Institutions,</span>
@@ -1751,7 +1751,7 @@ export default function WhyWisePage() {
               CONTINUOUS SUPPORT
             </p>
             <h2
-              className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+              className="heading-fluid-lg"
               style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
             >
               Support That <span className="text-[#F4B942]">Continues</span>{" "}
@@ -1796,7 +1796,7 @@ export default function WhyWisePage() {
             THE WISE DIFFERENCE
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em]"
+            className="heading-fluid-lg"
             style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
           >
             Traditional Consultancy{" "}
@@ -1972,7 +1972,7 @@ export default function WhyWisePage() {
             GET STARTED
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="heading-fluid-lg relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Looking for More Than

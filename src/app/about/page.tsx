@@ -106,7 +106,7 @@ export default function AboutPage() {
               ABOUT WISE
             </p>
             <h1
-              className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-8"
+              className="heading-fluid-md mb-8"
               style={{ marginBottom: "2rem" }}
             >
               Building Institutions
@@ -561,7 +561,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-16"
+            className="heading-fluid-md mb-16"
             style={{ marginBottom: "4rem" }}
           >
             Why We <span className="text-[#F4B942]">Started</span>
@@ -750,7 +750,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-6"
+            className="heading-fluid-md mb-6"
             style={{ marginBottom: "1.5rem" }}
           >
             Why We <span className="text-[#F4B942]">Exist</span>
@@ -924,7 +924,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-6"
+            className="heading-fluid-md mb-6"
             style={{ marginBottom: "1.5rem" }}
           >
             Education Beyond <span className="text-[#F4B942]">Compliance</span>
@@ -1081,7 +1081,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-20"
+            className="heading-fluid-md mb-20"
             style={{ marginBottom: "2rem" }}
           >
             Principles That <span className="text-[#F4B942]">Guide Us</span>
@@ -1338,7 +1338,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-20"
+            className="heading-fluid-md mb-20"
             style={{ marginBottom: "4rem" }}
           >
             Meet the <span className="text-[#F4B942]">Founders</span>
@@ -1482,7 +1482,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-6"
+            className="heading-fluid-md mb-6"
             style={{ marginBottom: "1.5rem" }}
           >
             Supporting Schools{" "}
@@ -1618,7 +1618,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-[5rem] font-bold leading-[1.08] tracking-[-0.04em] mb-12"
+            className="heading-fluid-md mb-12"
           >
             Shaping the Future of{" "}
             <span className="text-[#F4B942]">Education</span>
@@ -1838,7 +1838,7 @@ export default function AboutPage() {
             PARTNER WITH US
           </p>
           <h2
-            className="text-5xl md:text-[5.4rem] font-bold leading-[1.1] tracking-[-0.05em] relative z-10"
+            className="heading-fluid-lg relative z-10"
             style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
           >
             Let's Build Better Institutions{" "}
