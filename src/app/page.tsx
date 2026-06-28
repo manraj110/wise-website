@@ -356,7 +356,7 @@ export default function Home() {
         id="home"
         className="relative z-10 min-h-screen flex items-center px-8 md:px-20"
       >
-        <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center w-full">
+        <div className="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-10 items-center w-full">
           {/* ================= LEFT CONTENT ================= */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
@@ -364,9 +364,9 @@ export default function Home() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             style={{ marginLeft: "2rem", marginTop: "4rem" }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center min-w-0"
           >
-            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6 md:whitespace-nowrap">
+            <p className="text-[#F4B942] uppercase tracking-[0.40em] text-xl md:text-2xl font-semibold mb-6">
               END-TO-END EDUCATIONAL CONSULTING
             </p>
 
@@ -473,7 +473,7 @@ export default function Home() {
 
           {/* ================= RIGHT LOGO SECTION ================= */}
           <motion.div
-            className="relative flex justify-center items-center"
+            className="relative flex justify-center items-center min-w-0 hero-orb-container"
             whileHover={{ scale: 1.03 }}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
