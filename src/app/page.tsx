@@ -337,6 +337,7 @@ export default function Home() {
       <Navbar />
       <HashScrollFix />
 
+      <div className="zoom-scale">
       {/* ================= BACKGROUND LIGHTING ================= */}
 
       {/* TOP LEFT GOLD GLOW */}
@@ -7129,6 +7130,7 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </main>
   );
 }

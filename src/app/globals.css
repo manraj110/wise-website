@@ -239,14 +239,39 @@ body {
   transition: opacity 0.15s ease;
 }
 
-@media (min-width: 1024px) and (max-width: 1599px) {
-  html {
-    zoom: 0.75;
+/* ===================================================================
+   FIX 6 — AUTO "ZOOM" FOR LAPTOP-WIDTH SCREENS
+   Replaces an earlier version of this rule that targeted `html`
+   directly. That zoomed EVERYTHING including the fixed navbar, and
+   used a 1024-1599px range that also caught a MacBook Air's default
+   1440px-wide viewport (macOS scales its native 2560x1600 panel to a
+   "looks like 1440x900" logical resolution by default) — so it was
+   shrinking screens it shouldn't have.
+
+   Fix: zoom is now scoped to a wrapper div (.zoom-scale) around the
+   page content only, with <Navbar /> rendered as a sibling outside
+   it — so the navbar is never a descendant of the zoomed element and
+   is unaffected, no cancellation math needed. The range now stops at
+   1439px so a MacBook Air's default viewport is excluded too.
+
+   ASSUMPTION TO VERIFY: if you've changed your Mac's display setting
+   away from the default ("More Space" in System Settings > Displays),
+   your real viewport could be wider than 1440 — check at
+   whatismyscreenresolution.com and let me know if it's different.
+   ================================================================ */
+.zoom-scale {
+  display: block;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .zoom-scale {
+    zoom: 0.8;
   }
 }
 
+/* Optional: zoom IN slightly on very large/ultra-wide monitors.
+   Comment this block out if you don't want anything above 100%. */
 @media (min-width: 2560px) {
-  html {
+  .zoom-scale {
     zoom: 1.1;
   }
 }

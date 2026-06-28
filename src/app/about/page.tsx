@@ -82,6 +82,7 @@ export default function AboutPage() {
       <Navbar />
       <HashScrollFix />
 
+      <div className="zoom-scale">
       {/* ============================================================
           SECTION 1 — HERO
       ============================================================ */}
@@ -1889,6 +1890,7 @@ export default function AboutPage() {
           </div>
         </motion.div>
       </section>
+      </div>
     </main>
   );
 }

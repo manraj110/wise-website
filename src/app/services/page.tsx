@@ -393,6 +393,7 @@ export default function ServicesPage() {
       <Navbar />
       <HashScrollFix />
 
+      <div className="zoom-scale">
       {/* ================= BACKGROUND LIGHTING ================= */}
       <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
       <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
@@ -1794,6 +1795,7 @@ export default function ServicesPage() {
           </div>
         </motion.div>
       </section>
+      </div>
     </main>
   );
 }
