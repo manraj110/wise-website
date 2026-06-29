@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -17,6 +19,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   const pageLinks = [
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
@@ -24,11 +31,8 @@ export default function Navbar() {
     { label: "Why WISE", href: "/why-wise" },
   ];
 
-  // Contact is a section on the home page, not its own page.
-  // If we're already home, just smooth-scroll there — no navigation needed.
-  // If we're on another page, let the Link below navigate to "/#contact"
-  // and HashScrollFix takes over from there.
   const handleContactClick = (e: React.MouseEvent) => {
+    setMobileOpen(false);
     if (pathname === "/") {
       e.preventDefault();
       const el = document.getElementById("contact");
@@ -42,10 +46,10 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-[#14071A]/80" : "bg-transparent"
+        scrolled || mobileOpen ? "bg-[#14071A]/95" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-12 md:px-28 py-5">
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-28 py-5">
         {/* LOGO — always takes you to the very top of the home page */}
         <Link
           href="/"
@@ -64,8 +68,8 @@ export default function Navbar() {
           <h1 className="text-2xl font-bold tracking-wide text-white">WISE</h1>
         </Link>
 
-        {/* NAV LINKS */}
-        <div className="flex gap-8 text-sm uppercase tracking-wider text-white/80">
+        {/* DESKTOP NAV LINKS */}
+        <div className="hidden md:flex gap-8 text-sm uppercase tracking-wider text-white/80">
           {pageLinks.map(({ label, href }) => (
             <Link
               key={label}
@@ -75,7 +79,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-
           <Link
             href="/#contact"
             scroll={false}
@@ -85,7 +88,40 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
+
+        {/* HAMBURGER BUTTON — mobile only */}
+        <button
+          className="md:hidden text-white p-2 -mr-1"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* MOBILE DROPDOWN MENU */}
+      {mobileOpen && (
+        <div className="md:hidden bg-[#14071A] border-t border-white/[0.07] px-6 pb-6 pt-4 flex flex-col gap-5">
+          {pageLinks.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              onClick={() => setMobileOpen(false)}
+              className="text-white/80 text-base uppercase tracking-wider hover:text-[#F4B942] transition-colors py-1"
+            >
+              {label}
+            </Link>
+          ))}
+          <Link
+            href="/#contact"
+            scroll={false}
+            onClick={handleContactClick}
+            className="text-white/80 text-base uppercase tracking-wider hover:text-[#F4B942] transition-colors py-1"
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }

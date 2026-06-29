@@ -275,3 +275,123 @@ body {
     zoom: 1.1;
   }
 }
+
+/* ===================================================================
+   MOBILE RESPONSIVE — phones only (< 768px)
+   Laptop layout is 100% untouched — every rule here lives inside
+   @media (max-width: 767px) so it never fires on md+ screens.
+   =================================================================== */
+
+@media (max-width: 767px) {
+
+  /* ------------------------------------------------------------------
+     HEADING FLUID — tighter clamp floors on narrow phone screens
+     ------------------------------------------------------------------ */
+  .heading-fluid-lg  { font-size: clamp(1.9rem, 8vw,   5.4rem) !important; }
+  .heading-fluid-md  { font-size: clamp(1.75rem, 7.5vw, 5rem)   !important; }
+  .heading-fluid-sm  { font-size: clamp(1.75rem, 7vw,   4.6rem) !important; }
+  .heading-fluid-stat{ font-size: clamp(2.4rem,  9vw,   5.5rem) !important; }
+  .heading-fluid-xs  { font-size: clamp(1.2rem,  5vw,   2.2rem) !important; }
+  .heading-fluid-60  { font-size: clamp(1.4rem,  6vw,   3.75rem)!important; }
+  .heading-fluid-72  { font-size: clamp(1.6rem,  7vw,   4.5rem) !important; }
+  .heading-fluid-96  { font-size: clamp(1.9rem,  8vw,   6rem)   !important; }
+
+  /* ------------------------------------------------------------------
+     HERO — hide the orb on mobile (free up vertical space for text)
+     ------------------------------------------------------------------ */
+  .hero-orb-container {
+    display: none !important;
+  }
+
+  /* Hero text column: remove fixed left margin */
+  .hero-left-content {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Hero buttons: stack vertically, full width, comfortable padding */
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.875rem !important;
+    width: 100% !important;
+  }
+  .hero-btn {
+    padding-left: 1.5rem   !important;
+    padding-right: 1.5rem  !important;
+    padding-top: 0.9rem    !important;
+    padding-bottom: 0.9rem !important;
+    min-width: 0           !important;
+    width: 100%            !important;
+    text-align: center     !important;
+  }
+
+  /* ------------------------------------------------------------------
+     STATS BAR — tighter gap on 2-column layout
+     ------------------------------------------------------------------ */
+  /* Already handled via Tailwind gap-y-10 gap-x-8 in JSX */
+
+  /* ------------------------------------------------------------------
+     APPROACH TIMELINE — convert zigzag to simple vertical stack
+     ------------------------------------------------------------------ */
+
+  /* Each step row: become a plain vertical block */
+  .timeline-step {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  /* Hide the center node and vertical line */
+  .timeline-center-node,
+  .timeline-vline {
+    display: none !important;
+  }
+
+  /* Left and right slots: full width, no offset padding */
+  .timeline-left-slot,
+  .timeline-right-slot {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: flex-start !important;
+    padding-left: 0  !important;
+    padding-right: 0 !important;
+  }
+
+  /* Cards inside: full width */
+  .timeline-left-slot > div,
+  .timeline-right-slot > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* ------------------------------------------------------------------
+     COLLABORATION SECTION — collapse inline 1fr 1fr grid to 1-col
+     ------------------------------------------------------------------ */
+  .collab-grid {
+    grid-template-columns: 1fr !important;
+    margin-left: 0  !important;
+    margin-right: 0 !important;
+  }
+
+  /* Remove right border (becomes visual separator below) */
+  .collab-left-panel {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  }
+
+  /* ------------------------------------------------------------------
+     SECTION INDENT MARGINS — used throughout as style={{ marginLeft:"2rem" }}
+     These can't be targeted by class name since they're inline styles,
+     but the most impactful ones (hero, section titles) are handled by
+     dedicated classes above.
+     ------------------------------------------------------------------ */
+
+  /* Section padding: reduce excessive py-32 / pt-24 on mobile */
+  section {
+    padding-left: 1.25rem  !important;
+    padding-right: 1.25rem !important;
+  }
+  /* Re-allow px-8 on sections that already have it — those use 2rem,
+     our 1.25rem override is tighter which is what we want on a phone */
+}

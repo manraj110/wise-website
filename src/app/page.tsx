@@ -365,7 +365,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             style={{ marginLeft: "2rem", marginTop: "4rem" }}
-            className="flex flex-col justify-center min-w-0"
+            className="flex flex-col justify-center min-w-0 hero-left-content"
           >
             <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
               END-TO-END EDUCATIONAL CONSULTING
@@ -404,7 +404,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div
-                className="flex gap-8 flex-wrap items-center"
+                className="flex gap-8 flex-wrap items-center hero-buttons"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.6 }}
@@ -433,6 +433,7 @@ export default function Home() {
      transition-all
      duration-300
      min-w-[220px]
+     hero-btn
    "
                   style={{ fontSize: "1.05rem" }}
                 >
@@ -463,6 +464,7 @@ export default function Home() {
      transition-all
      duration-300
      min-w-[220px]
+     hero-btn
    "
                   style={{ fontSize: "1.05rem" }}
                 >
@@ -586,7 +588,7 @@ export default function Home() {
         {/* SUBTLE GOLD GLOW */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[320px] blur-[180px] rounded-full" />
 
-        <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-16">
+        <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 md:gap-y-20 md:gap-x-16">
           {/* ================= STAT 1 ================= */}
           <motion.div
             whileHover={{ y: -6, scale: 1.02 }}
@@ -702,7 +704,7 @@ export default function Home() {
    flex
    flex-col
    justify-center
-   min-h-[620px]
+   md:min-h-[620px]
  "
             style={{ marginLeft: "2rem" }}
           >
@@ -751,7 +753,7 @@ export default function Home() {
           </motion.div>
 
           {/* ================= RIGHT SIDE ================= */}
-          <div className="relative flex justify-center min-h-[620px]">
+          <div className="relative flex justify-center md:min-h-[620px]">
             {/* AMBIENT GLOW */}
             <div className="absolute w-[650px] h-[650px] bg-[#F4B942]/8 blur-[180px] rounded-full" />
 
@@ -1057,7 +1059,7 @@ export default function Home() {
 
       <section
         id="services"
-        className="relative z-10 px-8 md:px-20 pt-80 pb-32 overflow-hidden"
+        className="relative z-10 px-8 md:px-20 pt-24 md:pt-80 pb-16 md:pb-32 overflow-hidden"
       >
         {/* ================= BACKGROUND GLOWS ================= */}
 
@@ -4850,7 +4852,7 @@ export default function Home() {
         <div className="relative w-full">
           {/* VERTICAL LINE — fades at both ends identically */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 w-[2px] pointer-events-none"
+            className="absolute left-1/2 -translate-x-1/2 w-[2px] pointer-events-none timeline-vline"
             style={{
               top: "-60px",
               bottom: "-60px",
@@ -5029,10 +5031,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.15 }}
                   viewport={{ once: true }}
-                  className="group relative flex items-center"
+                  className="group relative flex items-center timeline-step"
                 >
                   {/* LEFT SLOT */}
-                  <div className="w-[calc(50%-28px)] flex justify-end pr-10">
+                  <div className="w-[calc(50%-28px)] flex justify-end pr-10 timeline-left-slot">
                     {isLeft && (
                       <div className="w-full max-w-[480px]">
                         <Card side="left" />
@@ -5041,7 +5043,7 @@ export default function Home() {
                   </div>
 
                   {/* CENTER NODE — solid bg so line doesn't show through */}
-                  <div className="w-14 flex-shrink-0 flex justify-center z-10">
+                  <div className="w-14 flex-shrink-0 flex justify-center z-10 timeline-center-node">
                     <div
                       className={`
                   w-12 h-12 rounded-full flex items-center justify-center relative
@@ -5061,7 +5063,7 @@ export default function Home() {
                   </div>
 
                   {/* RIGHT SLOT */}
-                  <div className="w-[calc(50%-28px)] flex justify-start pl-10">
+                  <div className="w-[calc(50%-28px)] flex justify-start pl-10 timeline-right-slot">
                     {!isLeft && (
                       <div className="w-full max-w-[480px]">
                         <Card side="right" />
@@ -6243,7 +6245,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative rounded-[40px] overflow-hidden border border-white/10"
+          className="relative rounded-[40px] overflow-hidden border border-white/10 collab-grid"
           style={{
             marginLeft: "2rem",
             marginRight: "2rem",
@@ -6253,7 +6255,7 @@ export default function Home() {
         >
           {/* LEFT — Content */}
           <div
-            className="flex flex-col justify-center relative"
+            className="flex flex-col justify-center relative collab-left-panel"
             style={{
               padding: "3rem 2.5rem",
               background: "rgba(255,255,255,0.03)",
@@ -6701,7 +6703,7 @@ export default function Home() {
                 </div>
               )}
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {["Your Name", "Institution Name"].map((placeholder) => (
                   <input
                     key={placeholder}
