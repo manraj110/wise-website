@@ -1176,6 +1176,7 @@ export default function Home() {
    bg-white/[0.04]
    backdrop-blur-xl
    overflow-hidden
+   service-card-canvas
  "
               style={{ marginRight: "2rem" }}
             >
@@ -4253,7 +4254,7 @@ export default function Home() {
 
         {/* STATIC CONTROLS */}
         <div
-          className="flex items-center gap-16 -mt-24"
+          className="flex items-center gap-16 -mt-24 service-controls-row"
           style={{ marginLeft: "4rem" }}
         >
           {/* LEARN MORE */}
@@ -4278,7 +4279,7 @@ export default function Home() {
           {/* DOTS */}
           {/* DOTS + ARROWS */}
           <div
-            className="flex items-center gap-6"
+            className="flex items-center gap-6 service-nav-dots"
             style={{ marginLeft: "24rem", marginTop: "5rem" }}
           >
             {/* PREV ARROW */}
@@ -4397,7 +4398,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden [backface-visibility:hidden]">
                 <div className="absolute top-[-100px] right-[-100px] w-[240px] h-[240px] bg-[#A855F7]/15 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4410,7 +4411,7 @@ export default function Home() {
                   01
                 </div>
                 <div
-                  className="relative z-10 h-full flex flex-col justify-center"
+                  className="relative z-10 h-full flex flex-col justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <h3
@@ -4437,7 +4438,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-[#F4B942]/40 bg-[#F4B942]/15 backdrop-blur-xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="absolute bottom-[-100px] right-[-100px] w-[240px] h-[240px] bg-[#F4B942]/15 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4450,7 +4451,7 @@ export default function Home() {
                   01
                 </div>
                 <div
-                  className="relative z-10 flex flex-col h-full justify-center"
+                  className="relative z-10 flex flex-col h-full justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <p
@@ -4497,7 +4498,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden [backface-visibility:hidden]">
                 <div className="absolute bottom-[-100px] left-[-100px] w-[240px] h-[240px] bg-cyan-400/10 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4510,7 +4511,7 @@ export default function Home() {
                   02
                 </div>
                 <div
-                  className="relative z-10 h-full flex flex-col justify-center"
+                  className="relative z-10 h-full flex flex-col justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <h3
@@ -4538,7 +4539,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-[#F4B942]/40 bg-[#F4B942]/15 backdrop-blur-xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="absolute bottom-[-100px] right-[-100px] w-[240px] h-[240px] bg-[#F4B942]/15 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4551,7 +4552,7 @@ export default function Home() {
                   02
                 </div>
                 <div
-                  className="relative z-10 flex flex-col h-full justify-center"
+                  className="relative z-10 flex flex-col h-full justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <p
@@ -4597,7 +4598,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden [backface-visibility:hidden]">
                 <div className="absolute top-[-100px] left-[-100px] w-[240px] h-[240px] bg-[#F4B942]/10 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4610,7 +4611,7 @@ export default function Home() {
                   03
                 </div>
                 <div
-                  className="relative z-10 h-full flex flex-col justify-center"
+                  className="relative z-10 h-full flex flex-col justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <h3
@@ -4637,7 +4638,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-[#F4B942]/40 bg-[#F4B942]/15 backdrop-blur-xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="absolute bottom-[-100px] right-[-100px] w-[240px] h-[240px] bg-[#F4B942]/15 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4650,7 +4651,7 @@ export default function Home() {
                   03
                 </div>
                 <div
-                  className="relative z-10 flex flex-col h-full justify-center"
+                  className="relative z-10 flex flex-col h-full justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <p
@@ -4696,7 +4697,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden [backface-visibility:hidden]">
                 <div className="absolute bottom-[-100px] right-[-100px] w-[240px] h-[240px] bg-pink-400/10 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4709,7 +4710,7 @@ export default function Home() {
                   04
                 </div>
                 <div
-                  className="relative z-10 h-full flex flex-col justify-center"
+                  className="relative z-10 h-full flex flex-col justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <h3
@@ -4737,7 +4738,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[28px] border border-[#F4B942]/40 bg-[#F4B942]/15 backdrop-blur-xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="absolute top-[-100px] left-[-100px] w-[240px] h-[240px] bg-[#F4B942]/15 blur-[120px] rounded-full" />
                 <div
-                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942]"
+                  className="rounded-[14px] bg-[#F4B942]/20 flex items-center justify-center font-bold text-[#F4B942] flip-card-badge"
                   style={{
                     width: "60px",
                     height: "60px",
@@ -4750,7 +4751,7 @@ export default function Home() {
                   04
                 </div>
                 <div
-                  className="relative z-10 flex flex-col h-full justify-center"
+                  className="relative z-10 flex flex-col h-full justify-center flip-card-content"
                   style={{ padding: "5rem 2.5rem 2rem 2.5rem" }}
                 >
                   <p
@@ -5271,7 +5272,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
               viewport={{ once: true }}
-              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group"
+              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group stat-card-mobile"
               style={{
                 padding: "28px 28px 24px 28px",
                 marginTop: "2rem",
@@ -5475,7 +5476,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
               viewport={{ once: true }}
-              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group"
+              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group stat-card-mobile"
               style={{
                 padding: "28px 28px 24px 28px",
                 marginTop: "2rem",
@@ -5551,7 +5552,7 @@ export default function Home() {
                     });
 
                     return (
-                      <div className="flex items-center gap-10">
+                      <div className="flex items-center gap-10 portfolio-piechart-row">
                         <div className="flex-shrink-0">
                           <svg
                             viewBox="0 0 180 180"
@@ -5683,7 +5684,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.15 }}
               viewport={{ once: true }}
-              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group"
+              className="rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl flex-1 group stat-card-mobile"
               style={{
                 padding: "28px 28px 24px 28px",
                 marginTop: "2rem",
@@ -6010,7 +6011,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: false, margin: "-100px" }}
-          className="relative rounded-[40px] overflow-hidden border border-white/10 grid lg:grid-cols-2 gap-0"
+          className="relative rounded-[40px] overflow-hidden border border-white/10 grid lg:grid-cols-2 gap-0 edge-margin-2rem"
           style={{ marginLeft: "2rem", marginRight: "2rem" }}
         >
           {/* LEFT — IMAGE */}
@@ -6072,7 +6073,7 @@ export default function Home() {
 
           {/* RIGHT — CONTENT */}
           <div
-            className="flex flex-col justify-center relative"
+            className="flex flex-col justify-center relative success-card-content"
             style={{
               padding: "2.5rem 3rem",
               background: "rgba(255,255,255,0.03)",
@@ -6528,12 +6529,12 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative rounded-[40px] overflow-hidden border border-white/10 grid lg:grid-cols-2 gap-0"
+          className="relative rounded-[40px] overflow-hidden border border-white/10 grid lg:grid-cols-2 gap-0 edge-margin-2rem"
           style={{ marginLeft: "2rem", marginRight: "2rem" }}
         >
           {/* LEFT — Contact Info */}
           <div
-            className="flex flex-col justify-center gap-10"
+            className="flex flex-col justify-center gap-10 contact-left-panel"
             style={{
               padding: "3rem",
               background: "rgba(244,185,66,0.04)",
@@ -6613,14 +6614,14 @@ export default function Home() {
                     </p>
                     {href ? (
                       label === "Phone" ? (
-                        <div className="flex items-center gap-2 text-base font-medium">
+                        <div className="flex items-center gap-2 text-base font-medium contact-phone-row">
                           <a
                             href="tel:+919826131600"
                             className="text-white hover:text-[#F4B942] transition-colors duration-300"
                           >
                             +91 98261 31600
                           </a>
-                          <span className="text-[#F4B942] font-bold">|</span>
+                          <span className="text-[#F4B942] font-bold contact-phone-sep">|</span>
                           <a
                             href="tel:+919754611052"
                             className="text-white hover:text-[#F4B942] transition-colors duration-300"
@@ -6683,7 +6684,7 @@ export default function Home() {
           {/* RIGHT — Contact Form */}
           {/* RIGHT — Contact Form */}
           <div
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center contact-right-panel"
             style={{ padding: "3rem", background: "rgba(255,255,255,0.02)" }}
           >
             <div className="flex flex-col gap-5">
@@ -6840,7 +6841,7 @@ export default function Home() {
       <footer className="relative z-10 border-t border-white/[0.07]">
         <div className="px-8 md:px-20 py-12">
           <div
-            className="grid md:grid-cols-3 gap-10 mb-12"
+            className="grid md:grid-cols-3 gap-10 mb-12 edge-margin-2rem"
             style={{ marginLeft: "2rem", marginRight: "2rem" }}
           >
             {/* Brand */}
