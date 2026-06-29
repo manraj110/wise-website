@@ -524,4 +524,89 @@ body {
   .contact-phone-sep {
     display: none !important;
   }
+
+  /* ------------------------------------------------------------------
+     SUCCESS-STORY CARD — stat row (15 Days / 100% / Successful)
+     Problem this solves: the three stats sit in a plain `flex gap-8`
+     row. Flex items default to min-width:auto, which floors their
+     width at their own min-content size — for a one-word value like
+     "Successful" that's the width of the whole word, since it has
+     nowhere to break. Three of those side by side, plus two 32px
+     gaps, add up to roughly 550-600px — way past a phone's width —
+     so the row (and the whole right-hand content panel that contains
+     it, since panels size to their widest child) was rendering wider
+     than the screen, with everything inside it clipped at the
+     viewport edge. That's the "Re[cord] Time" / "Succe[ssful]" /
+     "CBSE Complianc[e]" cut-off text in the screenshot — it's all one
+     symptom of this one row forcing the panel too wide.
+     Fix: stack the three stats vertically on mobile instead of
+     side-by-side, so nothing has to fight for horizontal space.
+     ------------------------------------------------------------------ */
+  .success-stats-row {
+    flex-direction: column !important;
+    gap: 1.1rem !important;
+  }
+
+  /* Defensive: make sure the right-hand content panel itself can
+     never be forced wider than its grid cell by a child's intrinsic
+     min-content size (belt-and-suspenders alongside the fix above). */
+  .success-card-content {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* ------------------------------------------------------------------
+     DIFFERENTIATORS ZIGZAG — Academic Depth / Structured Systems /
+     Long-Term Partnerships / Institution-Focused Approach
+     Problem this solves: each row is box + animated connector line +
+     heading, all on one flex line. The connector line's width is set
+     directly as an inline style by framer-motion (80/160/240/320px
+     for items 1-4, to create a staircase effect on desktop) — way
+     too long once box + line + ml-4 + heading text all have to share
+     a ~340px phone width. The heading text was left with almost no
+     room, so words wrapped one at a time and even those wrapped
+     fragments were too wide for what was left, getting clipped at
+     the screen edge ("Ins" / "Foc" / "Ap...").
+     Fix: force every connector line to a small uniform stub via
+     !important (a stylesheet !important rule beats an inline style
+     that isn't itself !important, which is the case here), let the
+     row wrap to align top instead of center once the heading wraps
+     to 2 lines, and give the heading breathing room to shrink/wrap
+     properly. The zigzag staircase effect is desktop-only chrome —
+     losing it on mobile is an acceptable trade for not cutting off
+     the words it's pointing at.
+     ------------------------------------------------------------------ */
+  .diff-row {
+    align-items: flex-start !important;
+  }
+  .diff-line {
+    width: 28px !important;
+    margin-top: 0.65rem !important;
+  }
+  .diff-heading {
+    font-size: 1.35rem !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  /* ------------------------------------------------------------------
+     "FROM AFFILIATION TO INSTITUTIONAL DEVELOPMENT" CARD — left panel
+     Problem this solves: the left panel has a hard inline
+     minWidth:"480px" (with maxWidth:"520px", flexShrink:0) sized for
+     the desktop two-column layout. Below the lg breakpoint the card
+     switches to flex-col, but minWidth/maxWidth still apply as real
+     width constraints regardless of flex direction — so on a phone
+     this panel refused to shrink below 480px and overflowed past the
+     viewport edge ("From Affiliation to Institutiona[l]", the
+     paragraph, all cut off at the same point).
+     Fix: release the fixed width band entirely on mobile so the
+     panel just takes the full width of its (now-vertically-stacked)
+     parent, like every other stacked card on this page already does.
+     ------------------------------------------------------------------ */
+  .affiliation-left-panel {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 24px 20px !important;
+  }
 }

@@ -759,7 +759,7 @@ export default function Home() {
 
             <div className="relative flex flex-col justify-center gap-16 w-full pt-12">
               {/* ================= ITEM 1 ================= */}
-              <div className="group flex items-center cursor-default">
+              <div className="group flex items-center cursor-default diff-row">
                 <div
                   className="
    w-5
@@ -779,60 +779,18 @@ export default function Home() {
                   whileInView={{ width: 80 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="
-
-
- h-[2px]
-
-
- bg-[#F4B942]
-
-
- shadow-[0_0_20px_rgba(244,185,66,1)]
-
-
- flex-shrink-0
-
-
-"
+                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
                 />
 
                 <h3
-                  className="
-
-
-   ml-4
-
-
-   text-2xl
-
-
-   font-semibold
-
-
-   text-white
-
-
-   transition-all
-
-
-   duration-500
-
-
-   group-hover:translate-x-2
-
-
-   group-hover:text-[#F4B942]
-
-
- "
+                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
                 >
                   Academic Depth
                 </h3>
               </div>
 
               {/* ================= ITEM 2 ================= */}
-              <div className="group flex items-center cursor-default">
+              <div className="group flex items-center cursor-default diff-row">
                 <div
                   className="
     w-5
@@ -852,58 +810,18 @@ export default function Home() {
                   whileInView={{ width: 160 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
-                  className="
- h-[2px]
-
-
- bg-[#F4B942]
-
-
- shadow-[0_0_20px_rgba(244,185,66,1)]
-
-
- flex-shrink-0
-
-
-"
+                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
                 />
 
                 <h3
-                  className="
-
-
-   ml-4
-
-
-   text-2xl
-
-
-   font-semibold
-
-
-   text-white
-
-
-   transition-all
-
-
-   duration-500
-
-
-   group-hover:translate-x-2
-
-
-   group-hover:text-[#F4B942]
-
-
- "
+                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
                 >
                   Structured Systems
                 </h3>
               </div>
 
               {/* ================= ITEM 3 ================= */}
-              <div className="group flex items-center cursor-default">
+              <div className="group flex items-center cursor-default diff-row">
                 <div
                   className="
    w-5
@@ -923,60 +841,18 @@ export default function Home() {
                   whileInView={{ width: 240 }}
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
-                  className="
-
-
- h-[2px]
-
-
- bg-[#F4B942]
-
-
- shadow-[0_0_20px_rgba(244,185,66,1)]
-
-
- flex-shrink-0
-
-
-"
+                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
                 />
 
                 <h3
-                  className="
-
-
-   ml-4
-
-
-   text-2xl
-
-
-   font-semibold
-
-
-   text-white
-
-
-   transition-all
-
-
-   duration-500
-
-
-   group-hover:translate-x-2
-
-
-   group-hover:text-[#F4B942]
-
-
- "
+                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
                 >
                   Long-Term Partnerships
                 </h3>
               </div>
 
               {/* ================= ITEM 4 ================= */}
-              <div className="group flex items-center cursor-default">
+              <div className="group flex items-center cursor-default diff-row">
                 <div
                   className="
 
@@ -998,51 +874,11 @@ export default function Home() {
                   whileInView={{ width: 320 }}
                   transition={{ duration: 1.4 }}
                   viewport={{ once: true }}
-                  className="
- h-[2px]
-
-
- bg-[#F4B942]
-
-
- shadow-[0_0_20px_rgba(244,185,66,1)]
-
-
- flex-shrink-0
-
-
-"
+                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
                 />
 
                 <h3
-                  className="
-
-
-   ml-4
-
-
-   text-2xl
-
-
-   font-semibold
-
-
-   text-white
-
-
-   transition-all
-
-
-   duration-500
-
-
-   group-hover:translate-x-2
-
-
-   group-hover:text-[#F4B942]
-
-
- "
+                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
                 >
                   Institution-Focused Approach
                 </h3>
@@ -1184,40 +1020,7 @@ export default function Home() {
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
                   <h4
-                    className="
-
-
-   absolute
-
-
-   top-[40px]
-
-
-   left-1/2
-
-
-   -translate-x-1/2
-
-
-   text-[#F4B942]
-
-
-   text-xl
-
-
-   tracking-[0.3em]
-
-
-   uppercase
-
-
-   whitespace-nowrap
-
-
-   drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]
-
-
- "
+                    className="absolute top-[40px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]"
                   >
                     The Affiliation Journey
                   </h4>
@@ -1431,18 +1234,7 @@ export default function Home() {
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
                   <h4
-                    className="
-      absolute
-      top-[40px]
-      left-1/2
-      -translate-x-1/2
-      text-[#F4B942]
-      text-xl
-      tracking-[0.3em]
-      uppercase
-      whitespace-nowrap
-      drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]
-    "
+                    className="absolute top-[40px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]"
                   >
                     A HOLISTIC SCHOOL ECOSYSTEM
                   </h4>
@@ -1714,7 +1506,7 @@ export default function Home() {
               ) : activeService === 2 ? (
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
-                  <h4 className="absolute top-[28px] left-1/2 -translate-x-1/2 text-[#F4B942] text-xl tracking-[0.3em] uppercase whitespace-nowrap drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]">
+                  <h4 className="absolute top-[28px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]">
                     Academic Excellence Cycle
                   </h4>
 
@@ -5821,7 +5613,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="rounded-[32px] border border-[#F4B942]/18 mb-8 overflow-hidden mt-10"
+          className="rounded-[32px] border border-[#F4B942]/18 mb-8 overflow-hidden mt-10 edge-margin-2rem"
           style={{
             background:
               "linear-gradient(135deg, rgba(244,185,66,0.06) 0%, rgba(106,0,255,0.05) 100%)",
@@ -5833,7 +5625,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-stretch">
             {/* LEFT */}
             <div
-              className="flex flex-col justify-center gap-3 border-b lg:border-b-0 lg:border-r border-white/[0.06] group hover:bg-white/[0.03] transition-colors duration-300"
+              className="flex flex-col justify-center gap-3 border-b lg:border-b-0 lg:border-r border-white/[0.06] group hover:bg-white/[0.03] transition-colors duration-300 affiliation-left-panel"
               style={{
                 padding: "28px 32px",
                 minWidth: "480px",
@@ -6129,7 +5921,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false, margin: "-100px" }}
-              className="flex gap-8"
+              className="flex gap-8 success-stats-row"
               style={{ marginBottom: "1.8rem" }}
             >
               {[
