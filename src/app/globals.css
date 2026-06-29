@@ -419,11 +419,12 @@ body {
      ------------------------------------------------------------------ */
   .service-card-canvas {
     margin-right: 0 !important;
-    width: 780px !important;
-    max-width: none !important;
-    flex-shrink: 0 !important;
-    zoom: 0.4;
-    zoom: calc((100vw - 40px) / 780px);
+    width: 100% !important;
+    max-width: 780px !important;
+    flex-shrink: 1 !important;
+    zoom: 0.42;
+    zoom: calc((100vw - 2.5rem) / 780px);
+    margin-bottom: 0;
   }
 
   /* ------------------------------------------------------------------
