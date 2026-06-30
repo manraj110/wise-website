@@ -418,10 +418,18 @@ body {
      dedicated classes above.
      ------------------------------------------------------------------ */
 
-  /* Section padding: reduce excessive py-32 / pt-24 on mobile */
+  /* Section padding: reduce excessive py-32 / pt-24 on mobile.
+     The original rule only ever touched left/right padding — top/bottom
+     padding (py-32 = 8rem = 128px on many sections) was left untouched,
+     so two adjacent sections each keeping their full 128px padding stack
+     into ~250px of dead empty space between them on a phone. That's the
+     oversized gap reported between Stats → Why Choose Us and
+     Why Choose Us → Services. */
   section {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
   /* Re-allow px-8 on sections that already have it — those use 2rem,
      our 1.25rem override is tighter which is what we want on a phone */
@@ -452,15 +460,24 @@ body {
     margin-right: 0 !important;
     width: 100% !important;
     max-width: 780px !important;
+    /* transform:scale() shrinks the child VISUALLY but not its LAYOUT
+       footprint — without an explicit height here the canvas would still
+       reserve a full 560px of vertical space below the now-tiny-looking
+       card. This uses vw (safe, no self-reference) rather than cqw
+       (which would make the canvas query its own size — unreliable). */
     height: calc(560px * ((100vw - 2.5rem) / 780px)) !important;
-    flex-shrink: 1 !important;
+    container-type: inline-size !important;
+    overflow: hidden !important;
   }
 
   .service-card-canvas > div {
     width: 780px !important;
     height: 560px !important;
     transform-origin: top left !important;
-    transform: scale(calc((100vw - 2.5rem) / 780px)) !important;
+    /* cqw measures the canvas's OWN rendered width directly — no vw/margin
+       math that can drift from the canvas's true size (which is what was
+       leaving a sliver of gap on the right edge before). */
+    transform: scale(calc(100cqw / 780px)) !important;
   }
 
   /* ------------------------------------------------------------------
@@ -615,6 +632,14 @@ body {
      ------------------------------------------------------------------ */
   .diff-row {
     align-items: flex-start !important;
+  }
+  /* The wrapper around all 4 diff-row items has no dedicated class —
+     it's targeted here via :has() since it only carries Tailwind
+     utility classes (gap-16 = 4rem, sized for desktop's tall zigzag
+     staircase). Four single-line rows don't need that much breathing
+     room once they're just stacked plainly on mobile. */
+  div:has(> .diff-row) {
+    gap: 1.5rem !important;
   }
   .diff-line {
     width: 28px !important;
