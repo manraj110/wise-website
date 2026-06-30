@@ -1106,7 +1106,6 @@ export default function ServicesPage() {
                   {!isOpen && (
                     <div
                       style={{
-                        display: "flex",
                         gap: "8px",
                         flexShrink: 0,
                         overflow: "hidden",
@@ -1455,7 +1454,7 @@ export default function ServicesPage() {
           <div className="grid lg:grid-cols-[1.35fr_1fr] gap-0">
             {/* LEFT */}
             <div
-              className="flex flex-col justify-center gap-6 border-b lg:border-b-0 lg:border-r border-white/[0.06]"
+              className="new-school-left-panel flex flex-col justify-center gap-6 border-b lg:border-b-0 lg:border-r border-white/[0.06]"
               style={{
                 padding: "3.5rem",
                 background:
@@ -1469,7 +1468,7 @@ export default function ServicesPage() {
               </p>
 
               {/* Timeline */}
-              <div className="relative flex items-center mt-2">
+              <div className="new-school-timeline relative flex items-center mt-2">
                 {timelineSteps.map((step, i) => {
                   const isActive = i === activeStep;
                   return (
@@ -1594,7 +1593,7 @@ export default function ServicesPage() {
             <>
               {/* Selector — plain text tabs, underline indicator, no boxes */}
               <div
-                className="flex flex-wrap gap-x-12 gap-y-4 border-b border-white/10"
+                className="profile-tabs-row flex flex-wrap gap-x-12 gap-y-4 border-b border-white/10"
                 style={{
                   marginLeft: "2rem",
                   marginRight: "2rem",
