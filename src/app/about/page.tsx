@@ -602,7 +602,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
               viewport={{ once: true }}
-              className="relative -translate-y-24"
+              className="relative lg:-translate-y-24"
             >
               <div className="flex flex-col gap-0">
                 {[
@@ -1403,8 +1403,7 @@ export default function AboutPage() {
              transition-colors duration-400"
                 >
                   <div
-                    className="flex flex-col sm:flex-row gap-10 items-center"
-                    style={{ padding: "3.5rem" }}
+                    className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center p-6 sm:p-[3.5rem]"
                   >
                     {/* LEFT — content */}
                     <div className="flex flex-col gap-5 flex-[1.3]">
@@ -1439,7 +1438,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* RIGHT — circular photo */}
-                    <div className="w-[260px] h-[260px] flex-shrink-0 rounded-full bg-[#F4B942]/15 border-2 border-[#F4B942]/40 flex items-center justify-center overflow-hidden group-hover:border-[#F4B942]/70 group-hover:shadow-[0_0_30px_rgba(244,185,66,0.25)] transition-all duration-300">
+                    <div className="w-[160px] h-[160px] sm:w-[260px] sm:h-[260px] flex-shrink-0 rounded-full bg-[#F4B942]/15 border-2 border-[#F4B942]/40 flex items-center justify-center overflow-hidden group-hover:border-[#F4B942]/70 group-hover:shadow-[0_0_30px_rgba(244,185,66,0.25)] transition-all duration-300">
                       {img ? (
                         <img
                           src={img}
@@ -1508,9 +1507,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9 }}
               viewport={{ once: true }}
-              className="rounded-[32px] border border-white/10 bg-white/[0.03] p-8 pb-14 overflow-hidden flex items-center justify-center"
+              className="rounded-[32px] border border-white/10 bg-white/[0.03] p-3 pb-8 sm:p-8 sm:pb-14 overflow-hidden flex items-center justify-center"
             >
-              <div className="w-full max-w-[900px] pt-12 [&>div>*:nth-child(n+2)]:hidden">
+              <div className="w-full max-w-[900px] pt-8 sm:pt-12 [&>div>*:nth-child(n+2)]:hidden">
                 <IndiaMapAbout
                   hoveredState={hoveredId}
                   onStateHover={setHoveredId}

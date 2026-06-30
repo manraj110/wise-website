@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const STATE_NAMES: Record<string, string> = {
   JK: "Jammu & Kashmir",
@@ -220,6 +220,18 @@ interface Props {
 
 export default function IndiaMapAbout({ hoveredState, onStateHover }: Props) {
   const [internalHovered, setInternalHovered] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Only ever flips true below the `sm` breakpoint (639px) — desktop/laptop
+  // rendering is completely unaffected since this starts `false` and the
+  // media query never matches at >=640px.
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const hovered = hoveredState ?? internalHovered;
 
@@ -241,7 +253,7 @@ export default function IndiaMapAbout({ hoveredState, onStateHover }: Props) {
   return (
     <div className="relative w-full flex flex-col items-center">
       <svg
-        viewBox="-120 0 650 437"
+        viewBox={isMobile ? "-165 0 740 437" : "-120 0 650 437"}
         width="100%"
         overflow="visible"
         style={{ maxWidth: "100%", display: "block" }}
@@ -301,8 +313,8 @@ export default function IndiaMapAbout({ hoveredState, onStateHover }: Props) {
           ))}
 
           {(() => {
-            const leftCol = -50;
-            const rightCol = 450;
+            const leftCol = isMobile ? -95 : -50;
+            const rightCol = isMobile ? 495 : 450;
 
             const leftIds = ["MH", "MP", "UP", "OR", "TG"];
             const rightIds = Object.keys(STATE_CENTROIDS).filter(
@@ -382,7 +394,7 @@ export default function IndiaMapAbout({ hoveredState, onStateHover }: Props) {
                     y={y + 1}
                     textAnchor={labelAnchor}
                     fill={isActive ? "#f5c842" : "rgba(244,185,66,0.6)"}
-                    fontSize="10"
+                    fontSize={isMobile ? "9" : "10"}
                     fontWeight={isActive ? "700" : "500"}
                     letterSpacing="0.04em"
                     style={{ transition: "all 0.2s" }}
