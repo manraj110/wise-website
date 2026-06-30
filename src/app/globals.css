@@ -686,28 +686,27 @@ body {
      utility classes (gap-16 = 4rem, sized for desktop's tall zigzag
      staircase). Four single-line rows don't need that much breathing
      room once they're just stacked plainly on mobile. */
-  div:has(> .diff-row) {
-    gap: 1.5rem !important;
-    /* This is the SAME min-width:auto flex-floor problem one level up:
-       this div is itself a flex item inside the "flex justify-center"
-       wrapper below, so it never shrinks below its own content's
-       natural width either — meaning .diff-row's min-width:0 fix never
-       got a chance to apply, because its own container was already
-       wider than the screen before .diff-row was even considered. */
-    min-width: 0 !important;
-    width: 100% !important;
+  /* THE ACTUAL ROOT CAUSE: the immediate grid item wrapping the whole
+     diff-row list ("relative flex justify-center md:min-h-[620px]") is
+     itself a CSS Grid item (child of "grid lg:grid-cols-2"). Grid items
+     default to min-width:auto just like flex items — so THIS div was
+     the one flooring at its content's widest row and refusing to
+     shrink, before any fix on .diff-row or its flex wrappers below it
+     ever got a chance to matter. Fixing it here, at the true top of
+     the chain, is what actually lets every row underneath wrap. */
+  #about .grid {
+    grid-template-columns: 1fr !important;
   }
-  /* One more level up: the "flex justify-center" wrapper around the
-     whole diff-row list has the exact same problem — no width/min-width
-     override, so as a flex item in the outer 2-col grid it floors at
-     its content's widest row ("Institution-Focused Approach") and
-     never lets anything below it actually shrink to the phone's width.
-     This is the true root: fixing it here is what finally lets every
-     row underneath wrap properly. */
-  div:has(> div:has(> .diff-row)) {
+  #about .grid > div {
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
+  }
+
+  div:has(> .diff-row) {
+    gap: 1.5rem !important;
+    min-width: 0 !important;
+    width: 100% !important;
   }
   .diff-line {
     width: 28px !important;
