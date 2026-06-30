@@ -759,7 +759,7 @@ export default function Home() {
 
             <div className="relative flex flex-col justify-center gap-16 w-full pt-12">
               {/* ================= ITEM 1 ================= */}
-              <div className="group flex items-center cursor-default diff-row">
+              <div className="group flex items-center cursor-default">
                 <div
                   className="
    w-5
@@ -779,18 +779,60 @@ export default function Home() {
                   whileInView={{ width: 80 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
+                  className="
+
+
+ h-[2px]
+
+
+ bg-[#F4B942]
+
+
+ shadow-[0_0_20px_rgba(244,185,66,1)]
+
+
+ flex-shrink-0
+
+
+"
                 />
 
                 <h3
-                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
+                  className="
+
+
+   ml-4
+
+
+   text-2xl
+
+
+   font-semibold
+
+
+   text-white
+
+
+   transition-all
+
+
+   duration-500
+
+
+   group-hover:translate-x-2
+
+
+   group-hover:text-[#F4B942]
+
+
+ "
                 >
                   Academic Depth
                 </h3>
               </div>
 
               {/* ================= ITEM 2 ================= */}
-              <div className="group flex items-center cursor-default diff-row">
+              <div className="group flex items-center cursor-default">
                 <div
                   className="
     w-5
@@ -810,18 +852,58 @@ export default function Home() {
                   whileInView={{ width: 160 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
-                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
+                  className="
+ h-[2px]
+
+
+ bg-[#F4B942]
+
+
+ shadow-[0_0_20px_rgba(244,185,66,1)]
+
+
+ flex-shrink-0
+
+
+"
                 />
 
                 <h3
-                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
+                  className="
+
+
+   ml-4
+
+
+   text-2xl
+
+
+   font-semibold
+
+
+   text-white
+
+
+   transition-all
+
+
+   duration-500
+
+
+   group-hover:translate-x-2
+
+
+   group-hover:text-[#F4B942]
+
+
+ "
                 >
                   Structured Systems
                 </h3>
               </div>
 
               {/* ================= ITEM 3 ================= */}
-              <div className="group flex items-center cursor-default diff-row">
+              <div className="group flex items-center cursor-default">
                 <div
                   className="
    w-5
@@ -841,18 +923,60 @@ export default function Home() {
                   whileInView={{ width: 240 }}
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
-                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
+                  className="
+
+
+ h-[2px]
+
+
+ bg-[#F4B942]
+
+
+ shadow-[0_0_20px_rgba(244,185,66,1)]
+
+
+ flex-shrink-0
+
+
+"
                 />
 
                 <h3
-                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
+                  className="
+
+
+   ml-4
+
+
+   text-2xl
+
+
+   font-semibold
+
+
+   text-white
+
+
+   transition-all
+
+
+   duration-500
+
+
+   group-hover:translate-x-2
+
+
+   group-hover:text-[#F4B942]
+
+
+ "
                 >
                   Long-Term Partnerships
                 </h3>
               </div>
 
               {/* ================= ITEM 4 ================= */}
-              <div className="group flex items-center cursor-default diff-row">
+              <div className="group flex items-center cursor-default">
                 <div
                   className="
 
@@ -874,11 +998,51 @@ export default function Home() {
                   whileInView={{ width: 320 }}
                   transition={{ duration: 1.4 }}
                   viewport={{ once: true }}
-                  className="h-[2px] bg-[#F4B942] shadow-[0_0_20px_rgba(244,185,66,1)] flex-shrink-0 diff-line"
+                  className="
+ h-[2px]
+
+
+ bg-[#F4B942]
+
+
+ shadow-[0_0_20px_rgba(244,185,66,1)]
+
+
+ flex-shrink-0
+
+
+"
                 />
 
                 <h3
-                  className="ml-4 text-2xl font-semibold text-white transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#F4B942] diff-heading"
+                  className="
+
+
+   ml-4
+
+
+   text-2xl
+
+
+   font-semibold
+
+
+   text-white
+
+
+   transition-all
+
+
+   duration-500
+
+
+   group-hover:translate-x-2
+
+
+   group-hover:text-[#F4B942]
+
+
+ "
                 >
                   Institution-Focused Approach
                 </h3>
@@ -1005,6 +1169,7 @@ export default function Home() {
    relative
    w-full
    max-w-[780px]
+   h-[560px]
    rounded-[40px]
    border
    border-white/10
@@ -1015,17 +1180,44 @@ export default function Home() {
  "
               style={{ marginRight: "2rem" }}
             >
-              {/* service-card-inner: on mobile this wrapper is scaled down via
-                  transform:scale() in globals.css. We can't zoom/scale the
-                  canvas itself because overflow-hidden breaks zoom on the same
-                  element — so the scale lives one level in, and the canvas
-                  clips cleanly at its boundary. */}
-              <div className="service-card-inner w-[780px] h-[560px]">
               {activeService === 0 ? (
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
                   <h4
-                    className="absolute top-[40px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]"
+                    className="
+
+
+   absolute
+
+
+   top-[40px]
+
+
+   left-1/2
+
+
+   -translate-x-1/2
+
+
+   text-[#F4B942]
+
+
+   text-xl
+
+
+   tracking-[0.3em]
+
+
+   uppercase
+
+
+   whitespace-nowrap
+
+
+   drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]
+
+
+ "
                   >
                     The Affiliation Journey
                   </h4>
@@ -1239,7 +1431,18 @@ export default function Home() {
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
                   <h4
-                    className="absolute top-[40px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]"
+                    className="
+      absolute
+      top-[40px]
+      left-1/2
+      -translate-x-1/2
+      text-[#F4B942]
+      text-xl
+      tracking-[0.3em]
+      uppercase
+      whitespace-nowrap
+      drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]
+    "
                   >
                     A HOLISTIC SCHOOL ECOSYSTEM
                   </h4>
@@ -1511,7 +1714,7 @@ export default function Home() {
               ) : activeService === 2 ? (
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
-                  <h4 className="absolute top-[28px] left-0 right-0 text-center text-[#F4B942] text-xl tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]">
+                  <h4 className="absolute top-[28px] left-1/2 -translate-x-1/2 text-[#F4B942] text-xl tracking-[0.3em] uppercase whitespace-nowrap drop-shadow-[0_0_20px_rgba(244,185,66,0.45)]">
                     Academic Excellence Cycle
                   </h4>
 
@@ -4045,7 +4248,6 @@ export default function Home() {
                   </p>
                 </div>
               )}
-              </div> {/* end service-card-inner */}
             </div>
           </motion.div>
         </div>
@@ -5619,7 +5821,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="rounded-[32px] border border-[#F4B942]/18 mb-8 overflow-hidden mt-10 edge-margin-2rem"
+          className="rounded-[32px] border border-[#F4B942]/18 mb-8 overflow-hidden mt-10"
           style={{
             background:
               "linear-gradient(135deg, rgba(244,185,66,0.06) 0%, rgba(106,0,255,0.05) 100%)",
@@ -5631,7 +5833,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-stretch">
             {/* LEFT */}
             <div
-              className="flex flex-col justify-center gap-3 border-b lg:border-b-0 lg:border-r border-white/[0.06] group hover:bg-white/[0.03] transition-colors duration-300 affiliation-left-panel"
+              className="flex flex-col justify-center gap-3 border-b lg:border-b-0 lg:border-r border-white/[0.06] group hover:bg-white/[0.03] transition-colors duration-300"
               style={{
                 padding: "28px 32px",
                 minWidth: "480px",
@@ -5927,7 +6129,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false, margin: "-100px" }}
-              className="flex gap-8 success-stats-row"
+              className="flex gap-8"
               style={{ marginBottom: "1.8rem" }}
             >
               {[

@@ -456,7 +456,9 @@ body {
     flex-shrink: 1 !important;
   }
 
-  .service-card-inner {
+  .service-card-canvas > div {
+    width: 780px !important;
+    height: 560px !important;
     transform-origin: top left !important;
     transform: scale(calc((100vw - 2.5rem) / 780px)) !important;
   }
