@@ -729,3 +729,8 @@ body {
     padding: 24px 20px !important;
   }
 }
+@media (min-width: 768px) {
+  .founder-card-pad {
+    padding: 3.5rem !important;
+  }
+}
