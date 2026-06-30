@@ -177,28 +177,44 @@ html {
   transform-origin: center center;
 }
 @container (max-width: 760px) {
-  .hero-orb { transform: scale(0.88); }
+  .hero-orb {
+    transform: scale(0.88);
+  }
 }
 @container (max-width: 680px) {
-  .hero-orb { transform: scale(0.78); }
+  .hero-orb {
+    transform: scale(0.78);
+  }
 }
 @container (max-width: 600px) {
-  .hero-orb { transform: scale(0.7); }
+  .hero-orb {
+    transform: scale(0.7);
+  }
 }
 @container (max-width: 520px) {
-  .hero-orb { transform: scale(0.6); }
+  .hero-orb {
+    transform: scale(0.6);
+  }
 }
 @container (max-width: 440px) {
-  .hero-orb { transform: scale(0.51); }
+  .hero-orb {
+    transform: scale(0.51);
+  }
 }
 @container (max-width: 360px) {
-  .hero-orb { transform: scale(0.42); }
+  .hero-orb {
+    transform: scale(0.42);
+  }
 }
 @container (max-width: 280px) {
-  .hero-orb { transform: scale(0.32); }
+  .hero-orb {
+    transform: scale(0.32);
+  }
 }
 @container (max-width: 220px) {
-  .hero-orb { transform: scale(0.25); }
+  .hero-orb {
+    transform: scale(0.25);
+  }
 }
 
 /* ===================================================================
@@ -283,18 +299,33 @@ body {
    =================================================================== */
 
 @media (max-width: 767px) {
-
   /* ------------------------------------------------------------------
      HEADING FLUID — tighter clamp floors on narrow phone screens
      ------------------------------------------------------------------ */
-  .heading-fluid-lg  { font-size: clamp(1.9rem, 8vw,   5.4rem) !important; }
-  .heading-fluid-md  { font-size: clamp(1.75rem, 7.5vw, 5rem)   !important; }
-  .heading-fluid-sm  { font-size: clamp(1.75rem, 7vw,   4.6rem) !important; }
-  .heading-fluid-stat{ font-size: clamp(2.4rem,  9vw,   5.5rem) !important; }
-  .heading-fluid-xs  { font-size: clamp(1.2rem,  5vw,   2.2rem) !important; }
-  .heading-fluid-60  { font-size: clamp(1.4rem,  6vw,   3.75rem)!important; }
-  .heading-fluid-72  { font-size: clamp(1.6rem,  7vw,   4.5rem) !important; }
-  .heading-fluid-96  { font-size: clamp(1.9rem,  8vw,   6rem)   !important; }
+  .heading-fluid-lg {
+    font-size: clamp(1.9rem, 8vw, 5.4rem) !important;
+  }
+  .heading-fluid-md {
+    font-size: clamp(1.75rem, 7.5vw, 5rem) !important;
+  }
+  .heading-fluid-sm {
+    font-size: clamp(1.75rem, 7vw, 4.6rem) !important;
+  }
+  .heading-fluid-stat {
+    font-size: clamp(2.4rem, 9vw, 5.5rem) !important;
+  }
+  .heading-fluid-xs {
+    font-size: clamp(1.2rem, 5vw, 2.2rem) !important;
+  }
+  .heading-fluid-60 {
+    font-size: clamp(1.4rem, 6vw, 3.75rem) !important;
+  }
+  .heading-fluid-72 {
+    font-size: clamp(1.6rem, 7vw, 4.5rem) !important;
+  }
+  .heading-fluid-96 {
+    font-size: clamp(1.9rem, 8vw, 6rem) !important;
+  }
 
   /* ------------------------------------------------------------------
      HERO — hide the orb on mobile (free up vertical space for text)
@@ -317,13 +348,13 @@ body {
     width: 100% !important;
   }
   .hero-btn {
-    padding-left: 1.5rem   !important;
-    padding-right: 1.5rem  !important;
-    padding-top: 0.9rem    !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 0.9rem !important;
     padding-bottom: 0.9rem !important;
-    min-width: 0           !important;
-    width: 100%            !important;
-    text-align: center     !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
   }
 
   /* ------------------------------------------------------------------
@@ -354,7 +385,7 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     justify-content: flex-start !important;
-    padding-left: 0  !important;
+    padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
@@ -370,7 +401,7 @@ body {
      ------------------------------------------------------------------ */
   .collab-grid {
     grid-template-columns: 1fr !important;
-    margin-left: 0  !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
@@ -389,7 +420,7 @@ body {
 
   /* Section padding: reduce excessive py-32 / pt-24 on mobile */
   section {
-    padding-left: 1.25rem  !important;
+    padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
   }
   /* Re-allow px-8 on sections that already have it — those use 2rem,
@@ -421,10 +452,13 @@ body {
     margin-right: 0 !important;
     width: 100% !important;
     max-width: 780px !important;
+    height: calc(560px * ((100vw - 2.5rem) / 780)) !important;
     flex-shrink: 1 !important;
-    zoom: 0.42;
-    zoom: calc((100vw - 2.5rem) / 780px);
-    margin-bottom: 0;
+  }
+
+  .service-card-inner {
+    transform-origin: top left !important;
+    transform: scale(calc((100vw - 2.5rem) / 780)) !important;
   }
 
   /* ------------------------------------------------------------------
@@ -498,7 +532,7 @@ body {
      leaves very little width for content on a phone.
      ------------------------------------------------------------------ */
   .edge-margin-2rem {
-    margin-left: 0  !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
   }
 

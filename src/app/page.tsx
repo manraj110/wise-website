@@ -1005,7 +1005,6 @@ export default function Home() {
    relative
    w-full
    max-w-[780px]
-   h-[560px]
    rounded-[40px]
    border
    border-white/10
@@ -1016,6 +1015,12 @@ export default function Home() {
  "
               style={{ marginRight: "2rem" }}
             >
+              {/* service-card-inner: on mobile this wrapper is scaled down via
+                  transform:scale() in globals.css. We can't zoom/scale the
+                  canvas itself because overflow-hidden breaks zoom on the same
+                  element — so the scale lives one level in, and the canvas
+                  clips cleanly at its boundary. */}
+              <div className="service-card-inner w-[780px] h-[560px]">
               {activeService === 0 ? (
                 <div className="relative z-10 h-full">
                   {/* HEADING */}
@@ -4040,6 +4045,7 @@ export default function Home() {
                   </p>
                 </div>
               )}
+              </div> {/* end service-card-inner */}
             </div>
           </motion.div>
         </div>
