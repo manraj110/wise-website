@@ -1403,10 +1403,10 @@ export default function AboutPage() {
              transition-colors duration-400"
                 >
                   <div
-                    className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center p-6 sm:p-[3.5rem]"
+                    className="flex flex-col-reverse sm:flex-row gap-8 sm:gap-10 items-center p-8 sm:p-[3.5rem]"
                   >
-                    {/* LEFT — content */}
-                    <div className="flex flex-col gap-5 flex-[1.3]">
+                    {/* LEFT (desktop) / BOTTOM (mobile) — content */}
+                    <div className="flex flex-col gap-5 flex-[1.3] w-full items-center text-center sm:items-start sm:text-left">
                       <div>
                         <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-[#F4B942] transition-colors duration-300">
                           {name}
@@ -1421,10 +1421,10 @@ export default function AboutPage() {
                       </p>
 
                       {spacerHeight > 0 && (
-                        <div style={{ height: `${spacerHeight}px` }} />
+                        <div className="hidden sm:block" style={{ height: `${spacerHeight}px` }} />
                       )}
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                         {tags.map((tag) => (
                           <span
                             key={tag}
@@ -1437,8 +1437,8 @@ export default function AboutPage() {
                       </div>
                     </div>
 
-                    {/* RIGHT — circular photo */}
-                    <div className="w-[160px] h-[160px] sm:w-[260px] sm:h-[260px] flex-shrink-0 rounded-full bg-[#F4B942]/15 border-2 border-[#F4B942]/40 flex items-center justify-center overflow-hidden group-hover:border-[#F4B942]/70 group-hover:shadow-[0_0_30px_rgba(244,185,66,0.25)] transition-all duration-300">
+                    {/* RIGHT (desktop) / TOP (mobile) — circular photo */}
+                    <div className="w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] flex-shrink-0 rounded-full bg-[#F4B942]/15 border-2 border-[#F4B942]/40 flex items-center justify-center overflow-hidden group-hover:border-[#F4B942]/70 group-hover:shadow-[0_0_30px_rgba(244,185,66,0.25)] transition-all duration-300">
                       {img ? (
                         <img
                           src={img}
