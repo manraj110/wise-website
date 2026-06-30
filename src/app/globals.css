@@ -452,13 +452,13 @@ body {
     margin-right: 0 !important;
     width: 100% !important;
     max-width: 780px !important;
-    height: calc(560px * ((100vw - 2.5rem) / 780)) !important;
+    height: calc(560px * ((100vw - 2.5rem) / 780px)) !important;
     flex-shrink: 1 !important;
   }
 
   .service-card-inner {
     transform-origin: top left !important;
-    transform: scale(calc((100vw - 2.5rem) / 780)) !important;
+    transform: scale(calc((100vw - 2.5rem) / 780px)) !important;
   }
 
   /* ------------------------------------------------------------------
