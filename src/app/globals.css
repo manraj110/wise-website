@@ -481,6 +481,43 @@ body {
   }
 
   /* ------------------------------------------------------------------
+     OUR SERVICES — heading/content/card vertical spacing
+     Problem this solves: this block stacks several desktop-sized gaps
+     on top of each other — mb-32 (8rem) under "OUR SERVICES"+heading,
+     a standalone h-12/h-16 spacer div right after it, then mb-10/mb-8
+     plus min-h-[150px]/[90px]/[140px] on the title/description/bullet
+     column. Those min-heights exist on desktop to keep the card from
+     jumping around as you cycle between services with different text
+     lengths — but on a phone the text already wraps to more lines on
+     its own, so the reserved min-height is mostly empty padding under
+     short titles, stacking with the big mb- gaps into the large dead
+     zones between the heading, the text, and the card reported here.
+     ------------------------------------------------------------------ */
+  #services .mb-32 {
+    margin-bottom: 2rem !important;
+  }
+  #services h2.mb-24 {
+    margin-bottom: 1.5rem !important;
+  }
+  #services .h-12 {
+    height: 0.5rem !important;
+  }
+  #services h3.min-h-\[150px\] {
+    min-height: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  #services p.min-h-\[90px\] {
+    min-height: 0 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  #services .min-h-\[140px\] {
+    min-height: 0 !important;
+  }
+  #services .gap-28 {
+    gap: 1.5rem !important;
+  }
+
+  /* ------------------------------------------------------------------
      OUR SERVICES — carousel controls (Learn More + dots/arrows)
      Problem this solves: on desktop the dots/arrows are pushed
      384px (marginLeft: 24rem) to the right to sit under the wide
@@ -632,6 +669,17 @@ body {
      ------------------------------------------------------------------ */
   .diff-row {
     align-items: flex-start !important;
+    /* The heading child already had min-width:0/flex:1 so IT could
+       shrink — but .diff-row itself sits inside a flex column wrapper
+       and, as a flex item, defaults to min-width:auto, which floors
+       it at its own content's natural width. With 4 long phrases like
+       "Institution-Focused Approach" that natural width is wider than
+       the phone screen, so the row (and the heading inside it) never
+       actually got the chance to wrap — the row itself was the thing
+       overflowing, not just the text. */
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   /* The wrapper around all 4 diff-row items has no dedicated class —
      it's targeted here via :has() since it only carries Tailwind
