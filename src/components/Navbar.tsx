@@ -101,7 +101,10 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN MENU */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#14071A] border-t border-white/[0.07] px-6 pb-6 pt-4 flex flex-col gap-5">
+        <div
+          className="md:hidden bg-[#14071A] border-t border-white/[0.07] pb-6 pt-4 flex flex-col gap-5"
+          style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+        >
           {pageLinks.map(({ label, href }) => (
             <Link
               key={label}
