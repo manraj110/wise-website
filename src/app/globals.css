@@ -763,6 +763,14 @@ body {
   .service-card-number {
     display: none !important;
   }
+  #partnerships [style*="marginLeft: 2rem"],
+  #partnerships [style*="marginLeft:2rem"] {
+    margin-left: 0 !important;
+  }
+  #partnerships svg[width="440"] {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
