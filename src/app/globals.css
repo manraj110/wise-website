@@ -531,9 +531,10 @@ body {
     align-items: flex-start !important;
     gap: 1.25rem !important;
     margin-top: 1.5rem !important;
+    margin-left: 0 !important;
   }
   .service-nav-dots {
-    margin-left: -2 !important;
+    margin-left: 0 !important;
     margin-top: 0 !important;
   }
 
