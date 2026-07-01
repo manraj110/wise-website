@@ -533,7 +533,7 @@ body {
     margin-top: 1.5rem !important;
   }
   .service-nav-dots {
-    margin-left: 0 !important;
+    margin-left: -2 !important;
     margin-top: 0 !important;
   }
 
@@ -809,6 +809,13 @@ body {
   .new-school-timeline > div > span,
   .new-school-timeline > div > * {
     white-space: normal !important;
+  }
+  /* Home page — India map card and Affiliation card narrower than
+     rest due to marginLeft/Right: 2rem on mobile. */
+  .india-map-card,
+  .affiliation-outer-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 @media (min-width: 768px) {
