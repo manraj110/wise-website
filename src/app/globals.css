@@ -790,6 +790,23 @@ body {
   .journey-flow-wrapper {
     margin-right: 0 !important;
   }
+  /* Services — profile tabs: underline indicator was positioned 1.6rem
+     below each tab (fine on desktop one-row layout), but when tabs stack
+     vertically that gap is too large and merges into the next tab. */
+  .profile-tabs-row .absolute.-bottom-\[1\.6rem\] {
+    bottom: -0.5rem !important;
+  }
+
+  /* Services — new school timeline pills: whitespace-nowrap forces all
+     4 pills onto one line which overflows on mobile. Allow wrapping. */
+  .new-school-timeline {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    row-gap: 0.5rem !important;
+  }
+  .new-school-timeline .whitespace-nowrap {
+    white-space: normal !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
