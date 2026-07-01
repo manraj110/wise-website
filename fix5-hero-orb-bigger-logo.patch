@@ -1,9 +1,0 @@
-diff --git a/src/app/page.tsx b/src/app/page.tsx
---- a/src/app/page.tsx
-+++ b/src/app/page.tsx
-@@ -356,7 +356,7 @@ export default function Home() {
-       id="home"
-       className="relative z-10 min-h-screen flex items-center px-8 md:px-20"
-     >
--      <div className="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-10 items-center w-full">
-+      <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-10 items-center w-full">
