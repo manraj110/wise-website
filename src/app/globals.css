@@ -756,6 +756,10 @@ body {
     column-gap: 0 !important;
     row-gap: 1.1rem !important;
   }
+  .service-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
