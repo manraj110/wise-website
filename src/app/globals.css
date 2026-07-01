@@ -533,6 +533,9 @@ body {
     margin-top: 1.5rem !important;
     margin-left: 0 !important;
   }
+  .service-controls-row > a {
+    margin-left: 3rem !important;
+  }
   .service-nav-dots {
     margin-left: 0 !important;
     margin-top: 0 !important;
