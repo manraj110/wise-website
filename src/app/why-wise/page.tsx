@@ -1284,7 +1284,7 @@ export default function WhyWisePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative flex justify-center"
+              className="journey-flow-wrapper relative flex justify-center"
               style={{ marginRight: "2rem" }}
             >
               <JourneyFlowDiagram />

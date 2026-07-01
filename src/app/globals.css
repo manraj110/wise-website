@@ -787,6 +787,9 @@ body {
   .track-hero-diagram {
     display: none !important;
   }
+  .journey-flow-wrapper {
+    margin-right: 0 !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
