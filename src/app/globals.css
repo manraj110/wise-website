@@ -783,6 +783,10 @@ body {
     letter-spacing: 0.15em !important;
     font-size: 0.9rem !important;
   }
+  .why-wise-hero-diagram,
+  .track-hero-diagram {
+    display: none !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {

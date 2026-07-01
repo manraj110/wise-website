@@ -1225,7 +1225,7 @@ export default function WhyWisePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative flex justify-center items-center"
+              className="why-wise-hero-diagram relative flex justify-center items-center"
               style={{ marginRight: "2rem", marginTop: "3rem" }}
             >
               <ServiceVsPartnershipDiagram />
