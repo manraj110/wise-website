@@ -771,8 +771,7 @@ body {
     width: 100% !important;
     height: auto !important;
   }
-  #guidance .flex.flex-col[style*='marginTop: "-7rem"'],
-  #guidance .flex.flex-col[style*='marginTop: "-7rem"'] {
+  .guidance-content {
     margin-top: 0 !important;
   }
 }

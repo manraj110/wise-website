@@ -1167,351 +1167,352 @@ export default function WhyWisePage() {
       <HashScrollFix />
 
       <div className="zoom-scale">
-      {/* ================= BACKGROUND LIGHTING ================= */}
-      <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
-      <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
-      <div className="absolute top-[22%] right-[16%] w-[420px] h-[420px] bg-[#A855F7]/20 blur-[140px] rounded-full" />
-      <div className="absolute bottom-[-210px] right-[-120px] w-[480px] h-[480px] bg-[#fea501]/35 blur-[155px] rounded-full" />
+        {/* ================= BACKGROUND LIGHTING ================= */}
+        <div className="absolute top-[-240px] left-[-240px] w-[480px] h-[480px] bg-[#fea501]/55 blur-[105px] rounded-full" />
+        <div className="absolute top-[5%] right-[8%] w-[900px] h-[900px] bg-[#6A00FF]/12 blur-[220px] rounded-full" />
+        <div className="absolute top-[22%] right-[16%] w-[420px] h-[420px] bg-[#A855F7]/20 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-210px] right-[-120px] w-[480px] h-[480px] bg-[#fea501]/35 blur-[155px] rounded-full" />
 
-      {/* ================= SECTION 1 — HERO ================= */}
-      <section
-        id="hero"
-        className="relative z-10 min-h-screen flex items-center px-8 md:px-20"
-      >
-        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center w-full">
-          {/* LEFT — CONTENT */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            style={{ marginLeft: "2rem", marginTop: "4rem" }}
-            className="flex flex-col justify-center"
-          >
-            <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
-              WHY WISE
-            </p>
+        {/* ================= SECTION 1 — HERO ================= */}
+        <section
+          id="hero"
+          className="relative z-10 min-h-screen flex items-center px-8 md:px-20"
+        >
+          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center w-full">
+            {/* LEFT — CONTENT */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              style={{ marginLeft: "2rem", marginTop: "4rem" }}
+              className="flex flex-col justify-center"
+            >
+              <p className="text-[#F4B942] uppercase tracking-[0.22em] text-xl md:text-2xl font-semibold mb-6">
+                WHY WISE
+              </p>
 
-            <motion.h1
-              className="heading-fluid-lg"
-              style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
+              <motion.h1
+                className="heading-fluid-lg"
+                style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                More Than a Consultancy.
+                <br />
+                <span className="text-[#F4B942]">A Long-Term Partner.</span>
+              </motion.h1>
+
+              <motion.p
+                className="text-white/65 text-xl max-w-xl leading-relaxed"
+                style={{ marginBottom: "2rem" }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                At WISE, we believe schools deserve more than isolated services.
+                We work alongside institutions to build strong foundations,
+                sustainable systems, and meaningful educational outcomes.
+              </motion.p>
+            </motion.div>
+
+            {/* RIGHT — SPLIT SCREEN SVG ILLUSTRATION */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative flex justify-center items-center"
+              style={{ marginRight: "2rem", marginTop: "3rem" }}
+            >
+              <ServiceVsPartnershipDiagram />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SPACING */}
+        <div className="h-4 md:h-8" />
+
+        {/* ================= SECTION 2 — OUR PHILOSOPHY ================= */}
+        <section id="philosophy" className="relative z-10 px-8 md:px-20 py-32">
+          <div className="absolute top-[10%] left-[-180px] w-[420px] h-[420px] bg-[#F4B942]/12 blur-[160px] rounded-full" />
+          <div className="absolute top-[0%] right-[15%] w-[700px] h-[700px] bg-[#6A00FF]/8 blur-[220px] rounded-full" />
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* LEFT — CONTENT */}
+            <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="relative z-10"
+              style={{ marginLeft: "2rem" }}
+            >
+              <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
+                OUR APPROACH
+              </p>
+              <h2
+                className="heading-fluid-lg"
+                style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
+              >
+                Schools Come for{" "}
+                <span className="text-[#F4B942]">Affiliation.</span>
+                <br />
+                They Stay for <span className="text-[#F4B942]">Growth.</span>
+              </h2>
+
+              <div className="space-y-6 text-[#D1D5DB] text-xl leading-[1.9] max-w-xl">
+                <p>
+                  Many schools initially approach us for affiliation support.
+                  Over time, they continue to partner with us for academics,
+                  training, examinations, institutional systems, and long-term
+                  development.
+                </p>
+                <p className="text-[#F4B942] font-medium">
+                  For us, affiliation is not the destination — it is the
+                  beginning.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* RIGHT — JOURNEY FLOW */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
+              className="relative flex justify-center"
+              style={{ marginRight: "2rem" }}
             >
-              More Than a Consultancy.
-              <br />
-              <span className="text-[#F4B942]">A Long-Term Partner.</span>
-            </motion.h1>
+              <JourneyFlowDiagram />
+            </motion.div>
+          </div>
+        </section>
 
-            <motion.p
-              className="text-white/65 text-xl max-w-xl leading-relaxed"
-              style={{ marginBottom: "2rem" }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              At WISE, we believe schools deserve more than isolated services.
-              We work alongside institutions to build strong foundations,
-              sustainable systems, and meaningful educational outcomes.
-            </motion.p>
-          </motion.div>
+        {/* SPACING */}
+        <div className="h-4 md:h-8" />
 
-          {/* RIGHT — SPLIT SCREEN SVG ILLUSTRATION */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative flex justify-center items-center"
-            style={{ marginRight: "2rem", marginTop: "3rem" }}
-          >
-            <ServiceVsPartnershipDiagram />
-          </motion.div>
-        </div>
-      </section>
+        {/* ================= SECTION 3 — DIFFERENTIATOR CARDS ================= */}
+        <section
+          id="differentiator-cards"
+          className="relative z-10 px-8 md:px-16 py-24"
+        >
+          <div className="absolute top-0 left-[-120px] w-[320px] h-[320px] bg-[#F59E0B]/10 blur-[140px] rounded-full" />
+          <div className="absolute bottom-0 right-[-120px] w-[300px] h-[300px] bg-purple-600/10 blur-[140px] rounded-full" />
 
-      {/* SPACING */}
-      <div className="h-4 md:h-8" />
-
-      {/* ================= SECTION 2 — OUR PHILOSOPHY ================= */}
-      <section id="philosophy" className="relative z-10 px-8 md:px-20 py-32">
-        <div className="absolute top-[10%] left-[-180px] w-[420px] h-[420px] bg-[#F4B942]/12 blur-[160px] rounded-full" />
-        <div className="absolute top-[0%] right-[15%] w-[700px] h-[700px] bg-[#6A00FF]/8 blur-[220px] rounded-full" />
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT — CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative z-10"
-            style={{ marginLeft: "2rem" }}
+            className="relative z-10 mb-20"
+            style={{ marginTop: "6rem", marginLeft: "2rem" }}
           >
             <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
-              OUR APPROACH
+              OUR DIFFERENTIATORS
             </p>
             <h2
               className="heading-fluid-lg"
-              style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
+              style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
             >
-              Schools Come for{" "}
-              <span className="text-[#F4B942]">Affiliation.</span>
-              <br />
-              They Stay for <span className="text-[#F4B942]">Growth.</span>
+              Why Institutions{" "}
+              <span className="text-[#F4B942]">Choose WISE</span>
             </h2>
-
-            <div className="space-y-6 text-[#D1D5DB] text-xl leading-[1.9] max-w-xl">
-              <p>
-                Many schools initially approach us for affiliation support. Over
-                time, they continue to partner with us for academics, training,
-                examinations, institutional systems, and long-term development.
-              </p>
-              <p className="text-[#F4B942] font-medium">
-                For us, affiliation is not the destination — it is the
-                beginning.
-              </p>
-            </div>
           </motion.div>
 
-          {/* RIGHT — JOURNEY FLOW */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative flex justify-center"
-            style={{ marginRight: "2rem" }}
+          <div
+            className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
           >
-            <JourneyFlowDiagram />
-          </motion.div>
-        </div>
-      </section>
+            {[
+              {
+                icon: Puzzle,
+                title: "End-to-End Solutions",
+                desc: "From school planning and affiliation to academics and operations, we support institutions at every stage of growth.",
+              },
+              {
+                icon: Fingerprint,
+                title: "Customized Approach",
+                desc: "Every school has unique goals and challenges. Our solutions are designed specifically for each institution.",
+              },
+              {
+                icon: Handshake,
+                title: "Long-Term Relationships",
+                desc: "Our focus is not one-time projects but building partnerships that continue to evolve over time.",
+              },
+              {
+                icon: Settings2,
+                title: "Practical Implementation",
+                desc: "We don't just recommend ideas — we help schools implement them effectively.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Student-Centric Philosophy",
+                desc: "Every solution ultimately aims to improve learning and student development.",
+              },
+              {
+                icon: CircuitBoard,
+                title: "Holistic Development",
+                desc: "We strengthen academic, administrative, and operational systems together.",
+              },
+            ].map(({ icon, title, desc }, i) => (
+              <MagneticCard
+                key={title}
+                icon={icon}
+                title={title}
+                desc={desc}
+                delay={i * 0.08}
+              />
+            ))}
+          </div>
+        </section>
 
-      {/* SPACING */}
-      <div className="h-4 md:h-8" />
+        {/* SPACING */}
+        <div className="h-24 md:h-36" />
 
-      {/* ================= SECTION 3 — DIFFERENTIATOR CARDS ================= */}
-      <section
-        id="differentiator-cards"
-        className="relative z-10 px-8 md:px-16 py-24"
-      >
-        <div className="absolute top-0 left-[-120px] w-[320px] h-[320px] bg-[#F59E0B]/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-0 right-[-120px] w-[300px] h-[300px] bg-purple-600/10 blur-[140px] rounded-full" />
+        {/* ================= SECTION 4 — ACADEMIC GUIDANCE ================= */}
+        <section id="guidance" className="relative z-10 px-8 md:px-20 py-24">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-[10%] left-[-100px] w-[500px] h-[500px] bg-[#F4B942]/8 blur-[200px] rounded-full" />
+            <div className="absolute bottom-[10%] right-[-80px] w-[400px] h-[400px] bg-[#A855F7]/8 blur-[200px] rounded-full" />
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10 mb-20"
-          style={{ marginTop: "6rem", marginLeft: "2rem" }}
-        >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-12">
-            OUR DIFFERENTIATORS
-          </p>
-          <h2
-            className="heading-fluid-lg"
-            style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
-          >
-            Why Institutions <span className="text-[#F4B942]">Choose WISE</span>
-          </h2>
-        </motion.div>
-
-        <div
-          className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
-        >
-          {[
-            {
-              icon: Puzzle,
-              title: "End-to-End Solutions",
-              desc: "From school planning and affiliation to academics and operations, we support institutions at every stage of growth.",
-            },
-            {
-              icon: Fingerprint,
-              title: "Customized Approach",
-              desc: "Every school has unique goals and challenges. Our solutions are designed specifically for each institution.",
-            },
-            {
-              icon: Handshake,
-              title: "Long-Term Relationships",
-              desc: "Our focus is not one-time projects but building partnerships that continue to evolve over time.",
-            },
-            {
-              icon: Settings2,
-              title: "Practical Implementation",
-              desc: "We don't just recommend ideas — we help schools implement them effectively.",
-            },
-            {
-              icon: GraduationCap,
-              title: "Student-Centric Philosophy",
-              desc: "Every solution ultimately aims to improve learning and student development.",
-            },
-            {
-              icon: CircuitBoard,
-              title: "Holistic Development",
-              desc: "We strengthen academic, administrative, and operational systems together.",
-            },
-          ].map(({ icon, title, desc }, i) => (
-            <MagneticCard
-              key={title}
-              icon={icon}
-              title={title}
-              desc={desc}
-              delay={i * 0.08}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* SPACING */}
-      <div className="h-24 md:h-36" />
-
-      {/* ================= SECTION 4 — ACADEMIC GUIDANCE ================= */}
-      <section id="guidance" className="relative z-10 px-8 md:px-20 py-24">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[10%] left-[-100px] w-[500px] h-[500px] bg-[#F4B942]/8 blur-[200px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-80px] w-[400px] h-[400px] bg-[#A855F7]/8 blur-[200px] rounded-full" />
-        </div>
-
-        {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          style={{ marginLeft: "2rem", marginBottom: "4rem" }}
-        >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
-            ACADEMIC GUIDANCE
-          </p>
-          <h2
-            className="heading-fluid-lg"
-            style={{ marginTop: "1.5rem" }}
-          >
-            Inspired by Leaders Who Have{" "}
-            <span className="text-[#F4B942]">Shaped Education</span>
-          </h2>
-        </motion.div>
-
-        {/* Main grid */}
-        <div
-          className="relative grid lg:grid-cols-[1.4fr_1fr] gap-16 items-center"
-          style={{ marginLeft: "2rem", marginRight: "2rem" }}
-        >
-          {/* LEFT — content */}
+          {/* Section label */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col gap-8"
-            style={{ marginTop: "-7rem" }}
+            style={{ marginLeft: "2rem", marginBottom: "4rem" }}
           >
-            <p className="text-white/60 text-xl leading-relaxed">
-              At WISE, our approach to education is influenced by some of
-              India's most respected academic minds. The guidance and
-              association of{" "}
-              <span className="text-white font-semibold">Prof. H.C. Verma</span>{" "}
-              reinforce our belief that true education goes beyond marks and
-              focuses on conceptual understanding, curiosity, and meaningful
-              learning.
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+              ACADEMIC GUIDANCE
             </p>
-            <p className="text-white/60 text-xl leading-relaxed">
-              This academic perspective strengthens our work in teacher
-              development, institutional improvement, and the creation of
-              learning environments that encourage critical thinking and
-              lifelong learning.
-            </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.015 }}
-              className="relative rounded-[20px] border overflow-hidden"
-              style={{
-                padding: "1.5rem 2rem",
-                borderColor: "rgba(244,185,66,0.35)",
-                background: "rgba(244,185,66,0.06)",
-                transition: "border-color 0.3s ease",
-              }}
-            >
-              {/* animated glow sweep across the box */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(100deg, transparent 30%, rgba(244,185,66,0.12) 50%, transparent 70%)",
-                }}
-                animate={{ x: ["-100%", "100%"] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              />
-
-              {/* pulsing quote mark */}
-              <motion.p
-                className="text-[#F4B942] text-3xl font-bold mb-3 relative z-10"
-                animate={{ opacity: [0.6, 1, 0.6] }}
-                transition={{ duration: 2.4, repeat: Infinity }}
-              >
-                "
-              </motion.p>
-
-              <p className="text-white/75 text-lg leading-relaxed italic relative z-10">
-                Strong institutions are built when academic excellence and
-                practical implementation work together.
-              </p>
-
-              {/* glowing border accent on hover */}
-              <motion.div
-                className="absolute inset-0 rounded-[20px] pointer-events-none"
-                style={{ border: "1.5px solid rgba(244,185,66,0)" }}
-                whileHover={{ borderColor: "rgba(244,185,66,0.6)" }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.div>
+            <h2 className="heading-fluid-lg" style={{ marginTop: "1.5rem" }}>
+              Inspired by Leaders Who Have{" "}
+              <span className="text-[#F4B942]">Shaped Education</span>
+            </h2>
           </motion.div>
 
-          {/* RIGHT — HC Verma node diagram */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative flex items-center justify-center"
-            style={{ marginTop: "-2rem", minHeight: "520px" }}
+          {/* Main grid */}
+          <div
+            className="relative grid lg:grid-cols-[1.4fr_1fr] gap-16 items-center"
+            style={{ marginLeft: "2rem", marginRight: "2rem" }}
           >
-            <svg
-              viewBox="0 0 500 560"
-              width="100%"
-              style={{ maxWidth: "520px" }}
-              xmlns="http://www.w3.org/2000/svg"
+            {/* LEFT — content */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8 guidance-content"
+              style={{ marginTop: "-7rem" }}
             >
-              <defs>
-                <filter
-                  id="node-glow"
-                  x="-40%"
-                  y="-40%"
-                  width="180%"
-                  height="180%"
-                >
-                  <feGaussianBlur stdDeviation="5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-                <clipPath id="circle-clip">
-                  <circle cx="150" cy="170" r="115" />
-                </clipPath>
-              </defs>
+              <p className="text-white/60 text-xl leading-relaxed">
+                At WISE, our approach to education is influenced by some of
+                India's most respected academic minds. The guidance and
+                association of{" "}
+                <span className="text-white font-semibold">
+                  Prof. H.C. Verma
+                </span>{" "}
+                reinforce our belief that true education goes beyond marks and
+                focuses on conceptual understanding, curiosity, and meaningful
+                learning.
+              </p>
+              <p className="text-white/60 text-xl leading-relaxed">
+                This academic perspective strengthens our work in teacher
+                development, institutional improvement, and the creation of
+                learning environments that encourage critical thinking and
+                lifelong learning.
+              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.015 }}
+                className="relative rounded-[20px] border overflow-hidden"
+                style={{
+                  padding: "1.5rem 2rem",
+                  borderColor: "rgba(244,185,66,0.35)",
+                  background: "rgba(244,185,66,0.06)",
+                  transition: "border-color 0.3s ease",
+                }}
+              >
+                {/* animated glow sweep across the box */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(100deg, transparent 30%, rgba(244,185,66,0.12) 50%, transparent 70%)",
+                  }}
+                  animate={{ x: ["-100%", "100%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                />
 
-              <style>
-                {`
+                {/* pulsing quote mark */}
+                <motion.p
+                  className="text-[#F4B942] text-3xl font-bold mb-3 relative z-10"
+                  animate={{ opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 2.4, repeat: Infinity }}
+                >
+                  "
+                </motion.p>
+
+                <p className="text-white/75 text-lg leading-relaxed italic relative z-10">
+                  Strong institutions are built when academic excellence and
+                  practical implementation work together.
+                </p>
+
+                {/* glowing border accent on hover */}
+                <motion.div
+                  className="absolute inset-0 rounded-[20px] pointer-events-none"
+                  style={{ border: "1.5px solid rgba(244,185,66,0)" }}
+                  whileHover={{ borderColor: "rgba(244,185,66,0.6)" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* RIGHT — HC Verma node diagram */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center"
+              style={{ marginTop: "-2rem", minHeight: "520px" }}
+            >
+              <svg
+                viewBox="0 0 500 560"
+                width="100%"
+                style={{ maxWidth: "520px" }}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <filter
+                    id="node-glow"
+                    x="-40%"
+                    y="-40%"
+                    width="180%"
+                    height="180%"
+                  >
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <clipPath id="circle-clip">
+                    <circle cx="150" cy="170" r="115" />
+                  </clipPath>
+                </defs>
+
+                <style>
+                  {`
       .tag-card { transition: transform 0.25s ease, filter 0.25s ease; transform-box: fill-box; transform-origin: center; cursor: pointer; }
       .tag-card rect { transition: fill 0.25s ease, stroke 0.25s ease, stroke-width 0.25s ease; }
       .tag-card text { transition: fill 0.25s ease; }
@@ -1519,508 +1520,508 @@ export default function WhyWisePage() {
       .tag-card:hover rect { fill: rgba(244,185,66,0.22); stroke: #F4B942; stroke-width: 1.8; }
       .tag-card:hover text { fill: #FFD980; }
     `}
-              </style>
+                </style>
 
-              {/* Photo glow — pulsing */}
-              <circle
-                cx="150"
-                cy="170"
-                r="132"
-                fill="rgba(244,185,66,0.05)"
-                filter="url(#node-glow)"
-              >
-                <animate
-                  attributeName="r"
-                  values="132;138;132"
-                  dur="3.5s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values="0.6;1;0.6"
-                  dur="3.5s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle
-                cx="150"
-                cy="170"
-                r="117"
-                fill="#14071A"
-                stroke="#F4B942"
-                strokeWidth="2"
-                filter="url(#node-glow)"
-              >
-                <animate
-                  attributeName="stroke-opacity"
-                  values="0.7;1;0.7"
-                  dur="2.8s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <image
-                href="/hc-verma.jpg"
-                x="35"
-                y="55"
-                width="230"
-                height="230"
-                clipPath="url(#circle-clip)"
-                preserveAspectRatio="xMidYMid slice"
-              />
-
-              {/* Name block */}
-              <text
-                x="150"
-                y="320"
-                textAnchor="middle"
-                fill="white"
-                fontSize="16"
-                fontWeight="700"
-              >
-                Prof. H.C. Verma
-              </text>
-              <text
-                x="150"
-                y="340"
-                textAnchor="middle"
-                fill="rgba(244,185,66,0.6)"
-                fontSize="9.5"
-                fontWeight="600"
-                letterSpacing="0.14em"
-              >
-                PHYSICIST · AUTHOR · EDUCATOR
-              </text>
-              <line
-                x1="90"
-                y1="352"
-                x2="210"
-                y2="352"
-                stroke="rgba(244,185,66,0.2)"
-                strokeWidth="1"
-              />
-              <text
-                x="150"
-                y="368"
-                textAnchor="middle"
-                fill="rgba(255,255,255,0.28)"
-                fontSize="9"
-                letterSpacing="0.14em"
-              >
-                IIT KANPUR
-              </text>
-
-              {/* Connector spine — flowing dashes */}
-              <line
-                x1="280"
-                y1="86"
-                x2="280"
-                y2="338"
-                stroke="rgba(244,185,66,0.3)"
-                strokeWidth="1.4"
-                strokeDasharray="4 4"
-              >
-                <animate
-                  attributeName="stroke-dashoffset"
-                  values="0;-16"
-                  dur="1.6s"
-                  repeatCount="indefinite"
-                />
-              </line>
-
-              {/* Tag stack — with hover + flowing tick connectors */}
-              {[
-                { y: 60, label: "Teacher Development" },
-                { y: 144, label: "Academic Excellence" },
-                { y: 228, label: "Student-Centric Learning" },
-                { y: 312, label: "Conceptual Education" },
-              ].map(({ y, label }, i) => (
-                <g key={label} className="tag-card">
-                  <line
-                    x1="280"
-                    y1={y + 26}
-                    x2="296"
-                    y2={y + 26}
-                    stroke="rgba(244,185,66,0.3)"
-                    strokeWidth="1.2"
-                  >
-                    <animate
-                      attributeName="stroke-opacity"
-                      values="0.3;0.9;0.3"
-                      dur="2s"
-                      begin={`${i * 0.3}s`}
-                      repeatCount="indefinite"
-                    />
-                  </line>
-                  <rect
-                    x="296"
-                    y={y}
-                    width="190"
-                    height="52"
-                    rx="18"
-                    fill="rgba(244,185,66,0.1)"
-                    stroke="rgba(244,185,66,0.45)"
-                    strokeWidth="1.2"
-                    filter="url(#node-glow)"
+                {/* Photo glow — pulsing */}
+                <circle
+                  cx="150"
+                  cy="170"
+                  r="132"
+                  fill="rgba(244,185,66,0.05)"
+                  filter="url(#node-glow)"
+                >
+                  <animate
+                    attributeName="r"
+                    values="132;138;132"
+                    dur="3.5s"
+                    repeatCount="indefinite"
                   />
-                  <text
-                    x="391"
-                    y={y + 30}
-                    textAnchor="middle"
-                    fontSize="12"
-                    fontWeight="600"
-                    fill="#F4B942"
-                  >
-                    {label}
-                  </text>
-                </g>
-              ))}
-            </svg>
-          </motion.div>
-        </div>
-      </section>
+                  <animate
+                    attributeName="opacity"
+                    values="0.6;1;0.6"
+                    dur="3.5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle
+                  cx="150"
+                  cy="170"
+                  r="117"
+                  fill="#14071A"
+                  stroke="#F4B942"
+                  strokeWidth="2"
+                  filter="url(#node-glow)"
+                >
+                  <animate
+                    attributeName="stroke-opacity"
+                    values="0.7;1;0.7"
+                    dur="2.8s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <image
+                  href="/hc-verma.jpg"
+                  x="35"
+                  y="55"
+                  width="230"
+                  height="230"
+                  clipPath="url(#circle-clip)"
+                  preserveAspectRatio="xMidYMid slice"
+                />
 
-      {/* ================= SECTION 5 — BEYOND DOCUMENTATION ================= */}
-      <section
-        id="beyond-documentation"
-        className="relative z-10 px-8 md:px-20 py-24"
-        style={{ marginTop: "-4rem" }}
-      >
-        <div className="absolute top-[10%] left-[-100px] w-[400px] h-[400px] bg-[#A855F7]/8 blur-[180px] rounded-full" />
-        <div className="absolute bottom-[10%] right-[-100px] w-[400px] h-[400px] bg-[#F4B942]/8 blur-[180px] rounded-full" />
+                {/* Name block */}
+                <text
+                  x="150"
+                  y="320"
+                  textAnchor="middle"
+                  fill="white"
+                  fontSize="16"
+                  fontWeight="700"
+                >
+                  Prof. H.C. Verma
+                </text>
+                <text
+                  x="150"
+                  y="340"
+                  textAnchor="middle"
+                  fill="rgba(244,185,66,0.6)"
+                  fontSize="9.5"
+                  fontWeight="600"
+                  letterSpacing="0.14em"
+                >
+                  PHYSICIST · AUTHOR · EDUCATOR
+                </text>
+                <line
+                  x1="90"
+                  y1="352"
+                  x2="210"
+                  y2="352"
+                  stroke="rgba(244,185,66,0.2)"
+                  strokeWidth="1"
+                />
+                <text
+                  x="150"
+                  y="368"
+                  textAnchor="middle"
+                  fill="rgba(255,255,255,0.28)"
+                  fontSize="9"
+                  letterSpacing="0.14em"
+                >
+                  IIT KANPUR
+                </text>
 
-        <div className="relative z-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
-          {/* LEFT — text */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            style={{ marginLeft: "2rem" }}
-          >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
-              OUR BELIEF
-            </p>
-            <h2
-              className="heading-fluid-lg"
-              style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
-            >
-              We Build <span className="text-[#F4B942]">Institutions,</span>
-              <br />
-              Not Just <span className="text-[#F4B942]">Files.</span>
-            </h2>
-            <p className="text-white/55 text-xl max-w-xl leading-relaxed">
-              Educational transformation goes far beyond paperwork and
-              compliance. Strong schools require systems, trained educators,
-              structured processes, and a culture that supports learning. This
-              belief defines every engagement at WISE.
-            </p>
-          </motion.div>
+                {/* Connector spine — flowing dashes */}
+                <line
+                  x1="280"
+                  y1="86"
+                  x2="280"
+                  y2="338"
+                  stroke="rgba(244,185,66,0.3)"
+                  strokeWidth="1.4"
+                  strokeDasharray="4 4"
+                >
+                  <animate
+                    attributeName="stroke-dashoffset"
+                    values="0;-16"
+                    dur="1.6s"
+                    repeatCount="indefinite"
+                  />
+                </line>
 
-          {/* RIGHT — diagram */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative z-10 flex justify-center items-center"
-            style={{ marginTop: "4rem", minWidth: 0 }}
-          >
-            <FilesVsEcosystemDiagram />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SPACING */}
-      <div className="h-24 md:h-36" />
-
-      {/* ================= SECTION 6 — LONG-TERM SUPPORT (lifecycle wheel) ================= */}
-      <section
-        id="continuous-support"
-        className="relative z-10 px-8 md:px-20 py-24"
-      >
-        <div className="absolute top-[20%] right-[-100px] w-[400px] h-[400px] bg-[#6A00FF]/10 blur-[200px] rounded-full" />
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            style={{ marginLeft: "2rem" }}
-          >
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
-              CONTINUOUS SUPPORT
-            </p>
-            <h2
-              className="heading-fluid-lg"
-              style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
-            >
-              Support That <span className="text-[#F4B942]">Continues</span>{" "}
-              Beyond <span className="text-[#F4B942]">Completion</span>{" "}
-            </h2>
-            <p className="text-white/55 text-xl max-w-xl leading-relaxed">
-              Our relationship with schools does not end after project
-              completion. We continue to support institutions through changing
-              requirements, academic needs, and future growth.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex justify-center"
-          >
-            <LifecycleWheelDiagram />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SPACING */}
-      <div className="h-24 md:h-36" />
-
-      {/* ================= SECTION 7 — COMPARISON ================= */}
-      <section id="comparison" className="relative z-10 px-8 md:px-20 py-24">
-        <div className="absolute top-[10%] left-[10%] w-[300px] h-[300px] bg-[#A855F7]/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[10%] right-[10%] w-[300px] h-[300px] bg-[#F4B942]/10 blur-[140px] rounded-full" />
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10 mb-16"
-          style={{ marginLeft: "2rem" }}
-        >
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
-            THE WISE DIFFERENCE
-          </p>
-          <h2
-            className="heading-fluid-lg"
-            style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
-          >
-            Traditional Consultancy{" "}
-            <span className="text-[#F4B942]">vs WISE</span>
-          </h2>
-        </motion.div>
-
-        <div
-          className="relative z-10 grid lg:grid-cols-2 gap-6"
-          style={{ marginLeft: "2rem", marginRight: "2rem" }}
-        >
-          {/* TRADITIONAL — purple */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative rounded-[32px] overflow-hidden"
-            style={{ padding: "2.5rem", background: "rgba(168,85,247,0.05)" }}
-          >
-            {/* seamless rotating border — gradient now wraps smoothly, no hard edge */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-                repeatType: "loop",
-              }}
-              style={{
-                position: "absolute",
-                inset: "-2px",
-                borderRadius: "34px",
-                background:
-                  "conic-gradient(from 0deg, rgba(168,85,247,0.8), rgba(168,85,247,0.1), rgba(168,85,247,0.8) 100%)",
-                zIndex: 0,
-                willChange: "transform",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: "1.5px",
-                borderRadius: "32px",
-                background: "#14071A",
-                zIndex: 1,
-              }}
-            />
-
-            <div className="relative z-10">
-              <p
-                className="text-purple-300/80 uppercase tracking-[0.25em] text-base font-semibold mb-8"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                Traditional Approach
-              </p>
-              <div className="flex flex-col gap-5">
+                {/* Tag stack — with hover + flowing tick connectors */}
                 {[
-                  "One-time service",
-                  "Documentation focused",
-                  "Standard solutions",
-                  "Ends after completion",
-                  "Individual tasks",
-                  "Compliance driven",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-4">
-                    <div className="w-2 h-2 rounded-full bg-purple-400/60 flex-shrink-0" />
-                    <span className="text-white/60 text-lg">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* WISE — gold */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="relative rounded-[32px] overflow-hidden"
-            style={{ padding: "2.5rem", background: "rgba(244,185,66,0.05)" }}
-          >
-            {/* animated gradient border */}
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              style={{
-                position: "absolute",
-                inset: "-2px",
-                borderRadius: "34px",
-                background:
-                  "conic-gradient(from 0deg, #F4B942, rgba(244,185,66,0.1), #F4B942)",
-                zIndex: 0,
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: "1.5px",
-                borderRadius: "32px",
-                background: "#14071A",
-                zIndex: 1,
-              }}
-            />
-
-            <div className="relative z-10">
-              <p
-                className="text-[#F4B942] uppercase tracking-[0.25em] text-base font-semibold mb-8"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                WISE Approach
-              </p>
-              <div className="flex flex-col gap-5">
-                {[
-                  "Long-term partnership",
-                  "Institution focused",
-                  "Customized solutions",
-                  "Continuous support",
-                  "Holistic development",
-                  "Growth driven",
-                ].map((item, i) => (
-                  <motion.div
-                    key={item}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.07 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-4"
-                  >
-                    <motion.div
-                      animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: i * 0.3,
-                      }}
-                      className="w-2 h-2 rounded-full bg-[#F4B942] flex-shrink-0"
-                      style={{ boxShadow: "0 0 8px rgba(244,185,66,0.8)" }}
+                  { y: 60, label: "Teacher Development" },
+                  { y: 144, label: "Academic Excellence" },
+                  { y: 228, label: "Student-Centric Learning" },
+                  { y: 312, label: "Conceptual Education" },
+                ].map(({ y, label }, i) => (
+                  <g key={label} className="tag-card">
+                    <line
+                      x1="280"
+                      y1={y + 26}
+                      x2="296"
+                      y2={y + 26}
+                      stroke="rgba(244,185,66,0.3)"
+                      strokeWidth="1.2"
+                    >
+                      <animate
+                        attributeName="stroke-opacity"
+                        values="0.3;0.9;0.3"
+                        dur="2s"
+                        begin={`${i * 0.3}s`}
+                        repeatCount="indefinite"
+                      />
+                    </line>
+                    <rect
+                      x="296"
+                      y={y}
+                      width="190"
+                      height="52"
+                      rx="18"
+                      fill="rgba(244,185,66,0.1)"
+                      stroke="rgba(244,185,66,0.45)"
+                      strokeWidth="1.2"
+                      filter="url(#node-glow)"
                     />
-                    <span className="text-white font-medium text-lg">
-                      {item}
-                    </span>
-                  </motion.div>
+                    <text
+                      x="391"
+                      y={y + 30}
+                      textAnchor="middle"
+                      fontSize="12"
+                      fontWeight="600"
+                      fill="#F4B942"
+                    >
+                      {label}
+                    </text>
+                  </g>
                 ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              </svg>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* ================= SECTION 8 — CTA ================= */}
-      <section id="cta" className="relative z-10 px-8 md:px-20 py-24">
-        <div className="absolute bottom-0 right-[-120px] w-[300px] h-[300px] bg-purple-600/10 blur-[140px] rounded-full" />
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative rounded-[40px] border border-[#F4B942]/25 overflow-hidden text-center"
-          style={{
-            marginTop: "8rem",
-            marginLeft: "2rem",
-            marginRight: "2rem",
-            marginBottom: "2rem",
-            padding: "5rem",
-            background:
-              "linear-gradient(135deg, rgba(244,185,66,0.08) 0%, rgba(168,85,247,0.06) 100%)",
-          }}
+        {/* ================= SECTION 5 — BEYOND DOCUMENTATION ================= */}
+        <section
+          id="beyond-documentation"
+          className="relative z-10 px-8 md:px-20 py-24"
+          style={{ marginTop: "-4rem" }}
         >
-          <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
-          <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
-            GET STARTED
-          </p>
-          <h2
-            className="heading-fluid-lg relative z-10"
-            style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
+          <div className="absolute top-[10%] left-[-100px] w-[400px] h-[400px] bg-[#A855F7]/8 blur-[180px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[-100px] w-[400px] h-[400px] bg-[#F4B942]/8 blur-[180px] rounded-full" />
+
+          <div className="relative z-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+            {/* LEFT — text */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              style={{ marginLeft: "2rem" }}
+            >
+              <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+                OUR BELIEF
+              </p>
+              <h2
+                className="heading-fluid-lg"
+                style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
+              >
+                We Build <span className="text-[#F4B942]">Institutions,</span>
+                <br />
+                Not Just <span className="text-[#F4B942]">Files.</span>
+              </h2>
+              <p className="text-white/55 text-xl max-w-xl leading-relaxed">
+                Educational transformation goes far beyond paperwork and
+                compliance. Strong schools require systems, trained educators,
+                structured processes, and a culture that supports learning. This
+                belief defines every engagement at WISE.
+              </p>
+            </motion.div>
+
+            {/* RIGHT — diagram */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative z-10 flex justify-center items-center"
+              style={{ marginTop: "4rem", minWidth: 0 }}
+            >
+              <FilesVsEcosystemDiagram />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SPACING */}
+        <div className="h-24 md:h-36" />
+
+        {/* ================= SECTION 6 — LONG-TERM SUPPORT (lifecycle wheel) ================= */}
+        <section
+          id="continuous-support"
+          className="relative z-10 px-8 md:px-20 py-24"
+        >
+          <div className="absolute top-[20%] right-[-100px] w-[400px] h-[400px] bg-[#6A00FF]/10 blur-[200px] rounded-full" />
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              style={{ marginLeft: "2rem" }}
+            >
+              <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+                CONTINUOUS SUPPORT
+              </p>
+              <h2
+                className="heading-fluid-lg"
+                style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
+              >
+                Support That <span className="text-[#F4B942]">Continues</span>{" "}
+                Beyond <span className="text-[#F4B942]">Completion</span>{" "}
+              </h2>
+              <p className="text-white/55 text-xl max-w-xl leading-relaxed">
+                Our relationship with schools does not end after project
+                completion. We continue to support institutions through changing
+                requirements, academic needs, and future growth.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <LifecycleWheelDiagram />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SPACING */}
+        <div className="h-24 md:h-36" />
+
+        {/* ================= SECTION 7 — COMPARISON ================= */}
+        <section id="comparison" className="relative z-10 px-8 md:px-20 py-24">
+          <div className="absolute top-[10%] left-[10%] w-[300px] h-[300px] bg-[#A855F7]/10 blur-[140px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[10%] w-[300px] h-[300px] bg-[#F4B942]/10 blur-[140px] rounded-full" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="relative z-10 mb-16"
+            style={{ marginLeft: "2rem" }}
           >
-            Looking for More Than
-            <br />
-            <span className="text-[#F4B942]">Just a Service Provider?</span>
-          </h2>
-          <p
-            className="text-white/55 text-xl leading-relaxed relative z-10"
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6">
+              THE WISE DIFFERENCE
+            </p>
+            <h2
+              className="heading-fluid-lg"
+              style={{ marginTop: "1.5rem", marginBottom: "4rem" }}
+            >
+              Traditional Consultancy{" "}
+              <span className="text-[#F4B942]">vs WISE</span>
+            </h2>
+          </motion.div>
+
+          <div
+            className="relative z-10 grid lg:grid-cols-2 gap-6"
+            style={{ marginLeft: "2rem", marginRight: "2rem" }}
+          >
+            {/* TRADITIONAL — purple */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative rounded-[32px] overflow-hidden"
+              style={{ padding: "2.5rem", background: "rgba(168,85,247,0.05)" }}
+            >
+              {/* seamless rotating border — gradient now wraps smoothly, no hard edge */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop",
+                }}
+                style={{
+                  position: "absolute",
+                  inset: "-2px",
+                  borderRadius: "34px",
+                  background:
+                    "conic-gradient(from 0deg, rgba(168,85,247,0.8), rgba(168,85,247,0.1), rgba(168,85,247,0.8) 100%)",
+                  zIndex: 0,
+                  willChange: "transform",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: "1.5px",
+                  borderRadius: "32px",
+                  background: "#14071A",
+                  zIndex: 1,
+                }}
+              />
+
+              <div className="relative z-10">
+                <p
+                  className="text-purple-300/80 uppercase tracking-[0.25em] text-base font-semibold mb-8"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  Traditional Approach
+                </p>
+                <div className="flex flex-col gap-5">
+                  {[
+                    "One-time service",
+                    "Documentation focused",
+                    "Standard solutions",
+                    "Ends after completion",
+                    "Individual tasks",
+                    "Compliance driven",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-4">
+                      <div className="w-2 h-2 rounded-full bg-purple-400/60 flex-shrink-0" />
+                      <span className="text-white/60 text-lg">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* WISE — gold */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="relative rounded-[32px] overflow-hidden"
+              style={{ padding: "2.5rem", background: "rgba(244,185,66,0.05)" }}
+            >
+              {/* animated gradient border */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                style={{
+                  position: "absolute",
+                  inset: "-2px",
+                  borderRadius: "34px",
+                  background:
+                    "conic-gradient(from 0deg, #F4B942, rgba(244,185,66,0.1), #F4B942)",
+                  zIndex: 0,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: "1.5px",
+                  borderRadius: "32px",
+                  background: "#14071A",
+                  zIndex: 1,
+                }}
+              />
+
+              <div className="relative z-10">
+                <p
+                  className="text-[#F4B942] uppercase tracking-[0.25em] text-base font-semibold mb-8"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  WISE Approach
+                </p>
+                <div className="flex flex-col gap-5">
+                  {[
+                    "Long-term partnership",
+                    "Institution focused",
+                    "Customized solutions",
+                    "Continuous support",
+                    "Holistic development",
+                    "Growth driven",
+                  ].map((item, i) => (
+                    <motion.div
+                      key={item}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + i * 0.07 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4"
+                    >
+                      <motion.div
+                        animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: i * 0.3,
+                        }}
+                        className="w-2 h-2 rounded-full bg-[#F4B942] flex-shrink-0"
+                        style={{ boxShadow: "0 0 8px rgba(244,185,66,0.8)" }}
+                      />
+                      <span className="text-white font-medium text-lg">
+                        {item}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ================= SECTION 8 — CTA ================= */}
+        <section id="cta" className="relative z-10 px-8 md:px-20 py-24">
+          <div className="absolute bottom-0 right-[-120px] w-[300px] h-[300px] bg-purple-600/10 blur-[140px] rounded-full" />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="relative rounded-[40px] border border-[#F4B942]/25 overflow-hidden text-center"
             style={{
-              marginBottom: "3rem",
-              maxWidth: "42rem",
-              marginLeft: "auto",
-              marginRight: "auto",
-              textAlign: "center",
+              marginTop: "8rem",
+              marginLeft: "2rem",
+              marginRight: "2rem",
+              marginBottom: "2rem",
+              padding: "5rem",
+              background:
+                "linear-gradient(135deg, rgba(244,185,66,0.08) 0%, rgba(168,85,247,0.06) 100%)",
             }}
           >
-            Partner with WISE to build stronger systems, empowered educators,
-            and future-ready institutions.
-          </p>
-          <div className="flex gap-6 justify-center flex-wrap relative z-10">
-            <a
-              href="https://calendly.com/wise-educatingindia/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#F4B942] text-black rounded-full font-semibold text-sm hover:shadow-[0_0_50px_rgba(244,185,66,0.7)]"
+            <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
+            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
+              GET STARTED
+            </p>
+            <h2
+              className="heading-fluid-lg relative z-10"
+              style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
+            >
+              Looking for More Than
+              <br />
+              <span className="text-[#F4B942]">Just a Service Provider?</span>
+            </h2>
+            <p
+              className="text-white/55 text-xl leading-relaxed relative z-10"
               style={{
-                padding: "10px 24px",
-                alignSelf: "flex-start",
-                display: "inline-flex",
+                marginBottom: "3rem",
+                maxWidth: "42rem",
+                marginLeft: "auto",
+                marginRight: "auto",
+                textAlign: "center",
               }}
             >
-              Schedule a Consultation
-            </a>
-            <a
-              href="mailto:wise.educatingindia@gmail.com"
-              className="inline-flex items-center gap-3 border border-[#F4B942]/40 text-[#F4B942] px-7 py-4 rounded-full font-semibold text-base hover:bg-[#F4B942]/10 hover:border-[#F4B942] hover:shadow-[0_0_30px_rgba(244,185,66,0.2)] transition-all duration-300 w-fit"
-              style={{
-                padding: "10px 24px",
-                alignSelf: "flex-start",
-                display: "inline-flex",
-              }}
-            >
-              Connect With Us
-            </a>
-          </div>
-        </motion.div>
-      </section>
+              Partner with WISE to build stronger systems, empowered educators,
+              and future-ready institutions.
+            </p>
+            <div className="flex gap-6 justify-center flex-wrap relative z-10">
+              <a
+                href="https://calendly.com/wise-educatingindia/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#F4B942] text-black rounded-full font-semibold text-sm hover:shadow-[0_0_50px_rgba(244,185,66,0.7)]"
+                style={{
+                  padding: "10px 24px",
+                  alignSelf: "flex-start",
+                  display: "inline-flex",
+                }}
+              >
+                Schedule a Consultation
+              </a>
+              <a
+                href="mailto:wise.educatingindia@gmail.com"
+                className="inline-flex items-center gap-3 border border-[#F4B942]/40 text-[#F4B942] px-7 py-4 rounded-full font-semibold text-base hover:bg-[#F4B942]/10 hover:border-[#F4B942] hover:shadow-[0_0_30px_rgba(244,185,66,0.2)] transition-all duration-300 w-fit"
+                style={{
+                  padding: "10px 24px",
+                  alignSelf: "flex-start",
+                  display: "inline-flex",
+                }}
+              >
+                Connect With Us
+              </a>
+            </div>
+          </motion.div>
+        </section>
       </div>
     </main>
   );
