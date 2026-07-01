@@ -771,6 +771,10 @@ body {
     width: 100% !important;
     height: auto !important;
   }
+  #guidance .flex.flex-col[style*='marginTop: "-7rem"'],
+  #guidance .flex.flex-col[style*='marginTop: "-7rem"'] {
+    margin-top: 0 !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
