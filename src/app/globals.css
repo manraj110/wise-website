@@ -601,6 +601,21 @@ body {
     padding-right: 1.5rem !important;
   }
 
+  .legal-modal-overlay {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  .legal-modal-box {
+    border-radius: 20px !important;
+  }
+  .legal-modal-body {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .legal-modal-body > * + * {
+    margin-top: 1.25rem !important;
+  }
+
   /* Success-story card: right-hand content padding shrunk so the
      heading/paragraph/stats aren't fighting a 48px side padding on
      top of the squeeze above. */

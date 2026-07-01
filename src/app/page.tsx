@@ -7130,7 +7130,7 @@ export default function Home() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={() => setActiveModal(null)}
-              className="fixed inset-0 z-[100] flex items-center justify-center px-4 md:px-8"
+              className="legal-modal-overlay fixed inset-0 z-[100] flex items-center justify-center px-4 md:px-8"
               style={{
                 background: "rgba(10,3,14,0.75)",
                 backdropFilter: "blur(8px)",
@@ -7142,7 +7142,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: 20, scale: 0.97 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-2xl max-h-[82vh] rounded-[32px] border border-[#F4B942]/20 bg-[#1B0826]/95 backdrop-blur-xl overflow-hidden shadow-[0_0_80px_rgba(244,185,66,0.15)]"
+                className="legal-modal-box relative w-full max-w-2xl max-h-[82vh] rounded-[32px] border border-[#F4B942]/20 bg-[#1B0826]/95 backdrop-blur-xl overflow-hidden shadow-[0_0_80px_rgba(244,185,66,0.15)]"
               >
                 {/* AMBIENT GLOWS */}
                 <div className="absolute top-[-100px] right-[-100px] w-[280px] h-[280px] bg-[#F4B942]/10 blur-[120px] rounded-full pointer-events-none" />
@@ -7194,7 +7194,7 @@ export default function Home() {
 
                 {/* SCROLLABLE CONTENT */}
                 <div
-                  className="relative z-10 px-10 md:px-12 py-8 overflow-y-auto max-h-[calc(82vh-150px)] text-white/65 text-[15px] leading-relaxed space-y-7"
+                  className="legal-modal-body relative z-10 px-10 md:px-12 py-8 overflow-y-auto max-h-[calc(82vh-150px)] text-white/65 text-[15px] leading-relaxed space-y-7"
                   style={{
                     paddingLeft: "2rem",
                     marginTop: "1rem",
