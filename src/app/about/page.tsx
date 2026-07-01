@@ -1853,7 +1853,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative rounded-[40px] border border-[#F4B942]/25 overflow-hidden text-center"
+            className="cta-card relative rounded-[40px] border border-[#F4B942]/25 overflow-hidden text-center"
             style={{
               marginTop: "6rem",
               marginLeft: "2rem",
@@ -1866,7 +1866,7 @@ export default function AboutPage() {
           >
             <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F4B942]/06 rounded-full blur-[80px]" />
 
-            <p className="text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
+            <p className="cta-label text-[#F4B942] uppercase tracking-[0.45em] text-xl md:text-2xl font-semibold mb-6 relative z-10">
               PARTNER WITH US
             </p>
             <h2
