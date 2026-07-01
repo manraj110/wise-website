@@ -802,9 +802,12 @@ body {
   .new-school-timeline {
     flex-wrap: wrap !important;
     gap: 0.5rem !important;
-    row-gap: 0.5rem !important;
   }
-  .new-school-timeline .whitespace-nowrap {
+  .new-school-timeline > div {
+    flex-shrink: 1 !important;
+  }
+  .new-school-timeline > div > span,
+  .new-school-timeline > div > * {
     white-space: normal !important;
   }
 }
