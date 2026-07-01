@@ -1042,6 +1042,7 @@ export default function ServicesPage() {
                   >
                     {/* number */}
                     <span
+                      className="service-card-number"
                       style={{
                         fontSize: "2.5rem",
                         fontWeight: 700,

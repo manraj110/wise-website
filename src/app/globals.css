@@ -760,6 +760,9 @@ body {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
+  .service-card-number {
+    display: none !important;
+  }
 }
 @media (min-width: 768px) {
   .founder-card-pad {
